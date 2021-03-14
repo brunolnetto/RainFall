@@ -1,0 +1,7 @@
+pandas==0.24.2
+jupyter==1.0.0
+jupyter-client==5.3.4
+jupyter-console==5.2.0
+jupyter-core==4.6.3
+numpy==1.16.5
+sklearn==0.0
