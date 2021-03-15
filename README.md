@@ -2,7 +2,7 @@
 
 Interpolation of water falling from a pipe 
 
-![alt text](https://imgur.com/a/9wmVw99)
+![alt text](https://github.com/brunolnetto/rainfall/blob/master/rain.jpg)
 
 # How to reproduce results
 
