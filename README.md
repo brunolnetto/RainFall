@@ -2,8 +2,6 @@
 
 Interpolation of water falling from a pipe 
 
-![alt text](https://github.com/brunolnetto/rainfall/blob/master/rain.jpg)
-
 # How to reproduce results
 
 1) Navigate to home directory: cd ~/
