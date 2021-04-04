@@ -8,7 +8,7 @@ Physics experiments:
 
 # How to reproduce results
 
-1) Navigate to home directory: cd ~/
+1) Navigate to home directory: ```cd ~/```
 2) Clone the repository: ```git clone git@github.com:brunolnetto/experiments.git```
 3) Run requirements installation on terminal: ```pip install -r pip_requirements.txt```
 4) Run the python notebook with the command on a terminal: jupyter notebook
