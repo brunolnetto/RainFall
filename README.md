@@ -1,6 +1,10 @@
-# RainFall
+# Physics experiments
 
-Interpolation of water falling from a pipe 
+Physics experiments:
+  1) Falling rain;
+  2) Disk rolling over sphere;
+  3) Pizzayolo;
+  4) Cartago
 
 # How to reproduce results
 
@@ -11,4 +15,4 @@ Interpolation of water falling from a pipe
 5) Open a browser and type ```localhost:8888``` on url text field
 6) Click on the main.py file
 7) Shift-Enter each cell to reproduce the result
->>>>>>> Create README.md
+
