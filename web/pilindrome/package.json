@@ -1,0 +1,36 @@
+{
+  "name": "piano",
+  "version": "1.0.0",
+  "description": "Pi for those who like it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brunolnetto",
+  "license": "ISC",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "axios": "^0.27.2",
+    "esbuild": "^0.15.9",
+    "express": "^4.18.1",
+    "i": "^0.3.7",
+    "nodemon": "^2.0.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/brunolnetto/piano.git"
+  },
+  "keywords": [
+    "pi"
+  ],
+  "bugs": {
+    "url": "https://bitbucket.org/brunolnetto/piano/issues"
+  },
+  "homepage": "https://bitbucket.org/brunolnetto/piano#readme"
+}
