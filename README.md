@@ -1,3 +1,5 @@
+This is a Linux-oriented tutorial. You must equivalent action on your operating system.
+
 # Description
 
 Experiments on computer science:
@@ -16,7 +18,7 @@ Experiments on computer science:
 ## Notebooks
 
 1) Run, if existent, requirements installation: ```pip install -r pip_requirements.txt```;
-2) Run the python notebook with the command: ```jupyter notebook```;
-3) Open a browser and type ```localhost:8888``` on url text field;
-4) Click on the ```main.ipynb``` file;
-5) ```Shift-Enter``` each cell to reproduce the result.
+2) Open a python notebook instance with command run: ```jupyter notebook```;
+3) Open a browser session instance, type ```localhost:8888``` on url text field and press key ```Enter```;
+4) Open file ```main.ipynb```;
+5) Press keystroke ```Shift + Enter``` on each cell to reproduce the result.
