@@ -1,8 +1,0 @@
-{
-  "extends": "arpinum",
-  "env": {
-    "jest": true,
-    "es6": true
-  },
-  "plugins": ["jest"]
-}
