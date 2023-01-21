@@ -1,10 +1,12 @@
 
-import { assert, batchAssert } from "../assertions"
+import { assert, batchAssert, atest } from "../assertions"
 
 const items = [
     [ 42,         (result) => expect(result).toBeDefined()            ],
     [ "42", "42", (result, expected) => expect(result).toBe(expected) ],
 ];
+
+let fixture, experiment, setup, exercise, verify, teardown;
 
 // Valid samples 
 const validLength1Item = items[0];
@@ -59,6 +61,34 @@ describe(
             () => {
                 expect.assertions(items.length);
                 batchAssert(items)
+            }
+        )
+    }
+)
+
+describe(
+    "atest", 
+    () => {
+        it(
+            "should assert atest", 
+            () => {
+                fixture = '42';
+                const longFunction = (fixture) => fixture;  
+
+                setup = () => {};
+                exercise = (fixture) => {
+                    return {
+                        "results": longFunction(fixture), 
+                        "expectations": '42',
+                        "assertionMaps": (result, expected) => expect(result).toBe(expected)
+                    }
+                };
+                verify = (experiment) => {
+                    experiment.assertionMaps(experiment.results, experiment.expectations)
+                }
+                teardown = () => {};
+
+                atest('42', setup, exercise, verify, teardown);
             }
         )
     }
