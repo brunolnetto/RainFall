@@ -39,3 +39,10 @@ export const assert = (item) => {
 }
 
 export const batchAssert = (items) => items.forEach(item => assert(item));
+
+export const atest = (fixtures, setup, exercise, verify, teardown) => {
+    setup();
+    const experiment = exercise(fixtures);
+    verify(experiment);
+    teardown();
+}
