@@ -1,10 +1,18 @@
-// Module import 1
+/* 
+ *  Module import
+ */
+
+/* Case 1 */
 import { add, multiply, subtract, divide } from "../operations"
 
-// Module import 2
+/* Case 2 */
 // import { add, multiply, subtract, divide } from "#module/operations"
 
-// Test definition 1
+/* 
+ *  Test design
+ */
+
+/* Case 1 */
 let sceneFunctions;
 
 const scenarios = {
@@ -51,7 +59,7 @@ for (const [ scenarioName, scenes ] of Object.entries(scenarios)) {
     describe(scenarioName, sceneFunctions)
 }
 
-// Test definition 2
+/* Case 2 */
 describe(
     "add", 
     () => it(
