@@ -1,3 +1,4 @@
+import { zip } from 'lodash'
 
 export const assert = (item) => {
     let result, expected;
@@ -40,9 +41,45 @@ export const assert = (item) => {
 
 export const batchAssert = (items) => items.forEach(item => assert(item));
 
-export const atest = (fixtures, setup, exercise, verify, teardown) => {
-    setup();
-    const experiment = exercise(fixtures);
-    verify(experiment);
-    teardown();
+export const atest = (fixtures, scenario) => {
+    scenario.setup();
+
+    const experiment = scenario.exercise(
+        scenario.prepare(fixtures)
+    );
+    
+    scenario.verify(experiment);
+    scenario.teardown();
+}
+
+export const batchAtest = (fixtures, scenarios) => {
+    let scenario, fixture;
+    
+    zip(fixtures, scenarios).forEach( 
+        ( scenario_tuple ) => {
+            fixture = scenario_tuple[0];
+            scenario = scenario_tuple[1];
+            
+            atest(fixture, scenario)
+        } 
+    );
+};
+
+export const buildScenario = (setup, prepare, exercise, verify, teardown) => {
+    return {
+        "setup": setup, 
+        "prepare": prepare,
+        "exercise": exercise,
+        "verify": verify,
+        "teardown": teardown
+
+    }
+}
+
+export const buildAssertion = (results, expectations, assertionMaps) => {
+    return {
+        "results": results, 
+        "expectations": expectations,
+        "assertionMaps": assertionMaps
+    }
 }
