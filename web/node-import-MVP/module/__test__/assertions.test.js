@@ -1,20 +1,22 @@
 
-import { assert, batchAssert, atest } from "../assertions"
+import { 
+    assert, 
+    batchAssert, 
+    atest,
+    batchAtest
+} from "../assertions"
 
-const items = [
-    [ 42,         (result) => expect(result).toBeDefined()            ],
-    [ "42", "42", (result, expected) => expect(result).toBe(expected) ],
-];
+import { 
+    assertFixtures,
+    validAssertLength1Item,
+    validAssertLength2Item,
+    invalidAssertItemLength,
+    invalidAssertCallbackItem ,
+    validAtestFixture,
+    validAtestScenario
+} from "./fixtures"
 
-let fixture, experiment, setup, exercise, verify, teardown;
-
-// Valid samples 
-const validLength1Item = items[0];
-const validLength2Item = items[1];
-
-// Error-prone samples
-const invalidArgumentLengthItem = [ '42' ];
-const invalidCallbackItem = [ '42', '42' ];
+let fixtures, scenarios;
 
 describe(
     "assert", 
@@ -23,7 +25,7 @@ describe(
             "should assert on result-callback pattern", 
             () => {
                 expect.assertions(1);
-                assert(validLength1Item);
+                assert(validAssertLength1Item);
             }
         );
 
@@ -31,14 +33,14 @@ describe(
             "should assert on result-expected-callback pattern", 
             () => {
                 expect.assertions(1);
-                assert(validLength2Item);
+                assert(validAssertLength2Item);
             }
         );
 
         it(
             "should throw error on item with length different than 2 or 3", 
             () => {    
-                const invalidArgumentFunction = () => assert(invalidArgumentLengthItem);
+                const invalidArgumentFunction = () => assert(invalidAssertItemLength);
                 expect(invalidArgumentFunction).toThrow(Error);
             }
         );
@@ -46,7 +48,7 @@ describe(
         it(
             "should throw error on invalid callback function", 
             () => {
-                const invalidCallbackFunction = () => assert(invalidCallbackItem);
+                const invalidCallbackFunction = () => assert(invalidAssertCallbackItem);
                 expect(invalidCallbackFunction).toThrow(Error);
             }
         );
@@ -59,36 +61,34 @@ describe(
         it(
             "should assert asserts in batch", 
             () => {
-                expect.assertions(items.length);
-                batchAssert(items)
+                expect.assertions(assertFixtures.length);
+                batchAssert(assertFixtures)
             }
         )
     }
 )
 
 describe(
-    "atest", 
+    'atest', 
     () => {
         it(
-            "should assert atest", 
+            'should assert atest', 
+            () => atest(validAtestFixture, validAtestScenario)
+        );
+    }
+);
+
+
+describe(
+    'batchAtest', 
+    () => {
+        it(
+            'should assert atest', 
             () => {
-                fixture = '42';
-                const longFunction = (fixture) => fixture;  
+                fixtures = [ validAtestFixture, validAtestFixture ];
+                scenarios = [ validAtestScenario, validAtestScenario ]
 
-                setup = () => {};
-                exercise = (fixture) => {
-                    return {
-                        "results": longFunction(fixture), 
-                        "expectations": '42',
-                        "assertionMaps": (result, expected) => expect(result).toBe(expected)
-                    }
-                };
-                verify = (experiment) => {
-                    experiment.assertionMaps(experiment.results, experiment.expectations)
-                }
-                teardown = () => {};
-
-                atest('42', setup, exercise, verify, teardown);
+                batchAtest(fixtures, scenarios)
             }
         )
     }
