@@ -1,4 +1,8 @@
-import { buildAssertion, buildScenario } from '../assertions'
+import _ from 'lodash'
+import { 
+    buildAssertion, 
+    buildScenario, 
+} from '../assertions'
 
 /* 
  * assert fixtures
@@ -20,14 +24,16 @@ export const invalidAssertCallbackItem = [ '42', '42' ];
  * atest fixtures
  */
 export let validAtestScenario;
-let setup, prepare, exercise, verify, teardown;
+let setup, prepare, exercise, teardown;
 
 export let validAtestFixture = '42';
 const resultFunction = (fixture_) => fixture_;
 let expectedAtestResult = '42';
 
 setup = () => {};
+
 prepare = (fixture_) => fixture_;
+
 exercise = (resources) => {
     return buildAssertion(
         resultFunction(resources),
@@ -35,10 +41,8 @@ exercise = (resources) => {
         (result, expected) => expect(result).toBe(expected)
     );
 };
-verify = (experiment) => {
-    experiment.assertionMaps(experiment.results, experiment.expectations)
-}
+
 teardown = () => {};
 
-validAtestScenario = buildScenario(setup, prepare, exercise, verify, teardown);
+validAtestScenario = buildScenario(setup, prepare, exercise, teardown);
 
