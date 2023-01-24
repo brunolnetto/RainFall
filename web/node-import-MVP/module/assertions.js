@@ -1,10 +1,11 @@
-import { zip } from 'lodash'
+import _ from 'lodash'
 
 export const assert = (item) => {
     let result, expected;
     const item_length = item.length;
-    
-    if(item_length === 2 || item_length === 3) {
+    const isValidAssertItem = item_length === 2 || item_length === 3;
+
+    if(isValidAssertItem) {
         const callback = item[item_length-1];
         
         if(typeof callback === 'function') {
@@ -33,13 +34,24 @@ export const assert = (item) => {
 
     } else {
         const description = 'Test element may have structure: ';
-        const schemas = '[result, assertion_callback] or [result, expected, assertion_callback]';
+        const validArgument_1 = '[result, assertion_callback]';
+        const validArgument_2 = '[result, expected, assertion_callback]';
+
+        const schemas = `${validArgument_1} or ${validArgument_2}`;
 
         throw Error(description + schemas);
     }   
 }
 
 export const batchAssert = (items) => items.forEach(item => assert(item));
+
+const verifyExperiment = (experiments) => {
+    batchAssert(_.zip(
+        experiments.results,
+        experiments.expectations,
+        experiments.assertionMaps
+    ));
+};
 
 export const atest = (fixtures, scenario) => {
     scenario.setup();
@@ -48,14 +60,15 @@ export const atest = (fixtures, scenario) => {
         scenario.prepare(fixtures)
     );
     
-    scenario.verify(experiment);
+    verifyExperiment(experiment);
+    
     scenario.teardown();
 }
 
 export const batchAtest = (fixtures, scenarios) => {
     let scenario, fixture;
     
-    zip(fixtures, scenarios).forEach( 
+    _.zip(fixtures, scenarios).forEach( 
         ( scenario_tuple ) => {
             fixture = scenario_tuple[0];
             scenario = scenario_tuple[1];
@@ -65,14 +78,12 @@ export const batchAtest = (fixtures, scenarios) => {
     );
 };
 
-export const buildScenario = (setup, prepare, exercise, verify, teardown) => {
+export const buildScenario = (setup, prepare, exercise, teardown) => {
     return {
         "setup": setup, 
         "prepare": prepare,
         "exercise": exercise,
-        "verify": verify,
         "teardown": teardown
-
     }
 }
 

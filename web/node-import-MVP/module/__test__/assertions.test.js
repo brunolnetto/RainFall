@@ -4,7 +4,7 @@ import {
     batchAssert, 
     atest,
     batchAtest
-} from "../assertions"
+} from '../assertions'
 
 import { 
     assertFixtures,
@@ -14,15 +14,15 @@ import {
     invalidAssertCallbackItem ,
     validAtestFixture,
     validAtestScenario
-} from "./fixtures"
+} from './fixtures'
 
 let fixtures, scenarios;
 
 describe(
-    "assert", 
+    'assert', 
     () => {
         it(
-            "should assert on result-callback pattern", 
+            'should assert on result-callback pattern', 
             () => {
                 expect.assertions(1);
                 assert(validAssertLength1Item);
@@ -30,7 +30,7 @@ describe(
         );
 
         it(
-            "should assert on result-expected-callback pattern", 
+            'should assert on result-expected-callback pattern', 
             () => {
                 expect.assertions(1);
                 assert(validAssertLength2Item);
@@ -38,7 +38,7 @@ describe(
         );
 
         it(
-            "should throw error on item with length different than 2 or 3", 
+            'should throw error on item with length different than 2 or 3', 
             () => {    
                 const invalidArgumentFunction = () => assert(invalidAssertItemLength);
                 expect(invalidArgumentFunction).toThrow(Error);
@@ -46,7 +46,7 @@ describe(
         );
 
         it(
-            "should throw error on invalid callback function", 
+            'should throw error on invalid callback function', 
             () => {
                 const invalidCallbackFunction = () => assert(invalidAssertCallbackItem);
                 expect(invalidCallbackFunction).toThrow(Error);
@@ -56,10 +56,10 @@ describe(
 );
 
 describe(
-    "batchAssert", 
+    'batchAssert', 
     () => {
         it(
-            "should assert asserts in batch", 
+            'should assert asserts in batch', 
             () => {
                 expect.assertions(assertFixtures.length);
                 batchAssert(assertFixtures)
