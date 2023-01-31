@@ -1,12 +1,10 @@
-module.exports = {
+const jest_config = {
   // The bail config option can be used here to have Jest stop running tests after
   // the first failure.
   bail: false,
 
   // Indicates whether each individual test should be reported during the run.
   verbose: false,
-
-  preset: "ts-jest",
 
   transform: {
     "\\.[jt]sx?$": "babel-jest"
@@ -37,3 +35,6 @@ module.exports = {
     },
   },
 };
+
+
+module.exports = jest_config;

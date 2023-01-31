@@ -1,4 +1,4 @@
-module.exports = {
+const babel_config = {
   presets: [
     [
       "@babel/preset-env",
@@ -9,4 +9,6 @@ module.exports = {
       },
     ],
   ],
-};
+}
+
+module.exports = babel_config;
