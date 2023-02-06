@@ -1,0 +1,21 @@
+{
+  "name": "eulejs-example",
+  "description": "Example for package eulejs",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "test": "echo \"Not implemented\""
+  },
+  "keywords": [
+    "jest"
+  ],
+  "author": "brunolnetto",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "eulejs": "^1.0.2"
+  }
+}
