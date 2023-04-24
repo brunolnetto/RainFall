@@ -1,0 +1,6 @@
+Africa, 54
+Antarctica, 0
+Asia, 49
+Europe, 44
+Oceania, 14
+America, 35
