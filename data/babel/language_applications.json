@@ -1,0 +1,531 @@
+{
+  "Python": [
+    "Web development",
+    "scientific computing",
+    "data analysis",
+    "artificial intelligence",
+    "automation",
+    "machine learning"
+  ],
+  "Java": [
+    "Enterprise software development",
+    "Android app development",
+    "web development",
+    "big data processing",
+    "scientific computing",
+    "gaming"
+  ],
+  "JavaScript": [
+    "Web development",
+    "front-end development",
+    "server-side development",
+    "desktop applications",
+    "mobile applications",
+    "game development"
+  ],
+  "C++": [
+    "Operating systems",
+    "gaming",
+    "database systems",
+    "compilers",
+    "finance",
+    "scientific computing",
+    "artificial intelligence",
+    "robotics"
+  ],
+  "C#": [
+    "Windows desktop applications",
+    "game development",
+    "web development",
+    "mobile app development",
+    "enterprise software development"
+  ],
+  "Ruby": [
+    "Web development",
+    "rapid prototyping",
+    "scripting",
+    "automation",
+    "testing",
+    "game development"
+  ],
+  "PHP": [
+    "Web development",
+    "server-side scripting",
+    "e-commerce",
+    "content management systems",
+    "social networking sites"
+  ],
+  "Swift": [
+    "iOS app development",
+    "macOS app development",
+    "Apple Watch app development",
+    "server-side programming"
+  ],
+  "Kotlin": [
+    "Android app development",
+    "web development",
+    "server-side development",
+    "desktop development",
+    "gaming"
+  ],
+  "Go": [
+    "Web development",
+    "networking",
+    "systems programming",
+    "cloud computing",
+    "machine learning",
+    "game development"
+  ],
+  "TypeScript": [
+    "Web development",
+    "front-end development",
+    "server-side development",
+    "desktop development",
+    "mobile app development"
+  ],
+  "Rust": [
+    "Systems programming",
+    "network programming",
+    "game development",
+    "web development",
+    "blockchain development"
+  ],
+  "SQL": [
+    "Database management",
+    "data analysis",
+    "data processing"
+  ],
+  "Objective-C": [
+    "iOS app development",
+    "macOS app development",
+    "desktop app development",
+    "game development"
+  ],
+  "R": [
+    "Statistical computing",
+    "data analysis",
+    "machine learning",
+    "data visualization"
+  ],
+  "MATLAB": [
+    "Numerical computing",
+    "data analysis",
+    "visualization",
+    "machine learning",
+    "signal processing",
+    "control systems"
+  ],
+  "Perl": [
+    "Web development",
+    "systems administration",
+    "network programming",
+    "text processing",
+    "automation",
+    "bioinformatics"
+  ],
+  "Lua": [
+    "Gaming",
+    "scripting",
+    "web development",
+    "embedded systems",
+    "artificial intelligence"
+  ],
+  "Scala": [
+    "Web development",
+    "big data processing",
+    "scientific computing",
+    "artificial intelligence",
+    "data analysis"
+  ],
+  "Haskell": [
+    "Web development",
+    "data analysis",
+    "artificial intelligence",
+    "scientific computing",
+    "blockchain development"
+  ],
+  "Dart": [
+    "Web development",
+    "mobile app development",
+    "server-side development",
+    "desktop development",
+    "game development"
+  ],
+  "Julia": [
+    "Scientific computing",
+    "numerical analysis",
+    "data science",
+    "machine learning",
+    "artificial intelligence"
+  ],
+  "Groovy": [
+    "Web development",
+    "scripting",
+    "automation",
+    "testing",
+    "data analysis",
+    "scientific computing"
+  ],
+  "Clojure": [
+    "Web development",
+    "server-side development",
+    "big data processing",
+    "scientific computing",
+    "artificial intelligence"
+  ],
+  "F#": [
+    "Web development",
+    "server-side development",
+    "scientific computing",
+    "data processing",
+    "artificial intelligence"
+  ],
+  "Erlang": [
+    "Distributed computing",
+    "messaging systems",
+    "telecoms",
+    "concurrency",
+    "fault-tolerant systems"
+  ],
+  "OCaml": [
+    "Scientific computing",
+    "numerical analysis",
+    "symbolic computation",
+    "data analysis",
+    "machine learning"
+  ],
+  "Lisp": [
+    "Artificial intelligence",
+    "scientific computing",
+    "symbolic computation",
+    "game development",
+    "web development"
+  ],
+  "Scheme": [
+    "Artificial intelligence",
+    "scientific computing",
+    "symbolic computation",
+    "game development",
+    "web development"
+  ],
+  "Prolog": [
+    "Artificial intelligence",
+    "natural language processing",
+    "symbolic computation",
+    "expert systems",
+    "planning systems"
+  ],
+  "Ada": [
+    "Aerospace and defense",
+    "transportation",
+    "healthcare",
+    "industrial automation",
+    "telecommunications",
+    "financial services"
+  ],
+  "Cobol": [
+    "Financial services",
+    "healthcare",
+    "government",
+    "insurance",
+    "banking",
+    "transportation"
+  ],
+  "Fortran": [
+    "Scientific computing",
+    "engineering",
+    "weather forecasting",
+    "computational fluid dynamics",
+    "physics",
+    "chemistry"
+  ],
+  "Pascal": [
+    "Education",
+    "scientific computing",
+    "engineering",
+    "gaming",
+    "desktop applications"
+  ],
+  "Assembly Language": [
+    "Low-level systems programming",
+    "device driver development",
+    "embedded systems",
+    "game development"
+  ],
+  "Bash": [
+    "Systems administration",
+    "automation",
+    "scripting",
+    "command-line interface development"
+  ],
+  "PowerShell": [
+    "Systems administration",
+    "automation",
+    "scripting",
+    "command-line interface development"
+  ],
+  "Crystal": [
+    "Web development",
+    "network programming",
+    "systems programming",
+    "game development"
+  ],
+  "Elixir": [
+    "Web development",
+    "concurrency",
+    "distributed systems",
+    "real-time applications",
+    "IoT"
+  ],
+  "ReasonML": [
+    "Front-end web development",
+    "server-side development",
+    "mobile app development"
+  ],
+  "CoffeeScript": [
+    "Web development",
+    "front-end development",
+    "server-side development",
+    "desktop development",
+    "game development"
+  ],
+  "Elm": [
+    "Web development",
+    "front-end development",
+    "game development"
+  ],
+  "Racket": [
+    "Web development",
+    "game development",
+    "scripting",
+    "education",
+    "research"
+  ],
+  "Perl 6": [
+    "Web development",
+    "systems administration",
+    "network programming",
+    "text processing",
+    "automation",
+    "bioinformatics"
+  ],
+  "Tcl": [
+    "Web development",
+    "scripting",
+    "automation",
+    "testing",
+    "embedded systems"
+  ],
+  "Smalltalk": [
+    "Object-oriented programming",
+    "graphical user interfaces",
+    "education"
+  ],
+  "BASIC": [
+    "Education",
+    "simple software development",
+    "scripting"
+  ],
+  "PL/I": [
+    "Business applications",
+    "scientific computing",
+    "database management"
+  ],
+  "Algol": [
+    "Scientific computing",
+    "algorithm development"
+  ],
+  "APL": [
+    "Numerical computing",
+    "scientific computing",
+    "data analysis"
+  ],
+  "Awk": [
+    "Text processing",
+    "scripting",
+    "data extraction and reporting"
+  ],
+  "Ceylon": [
+    "Web development",
+    "enterprise software development",
+    "functional programming"
+  ],
+  "Chapel": [
+    "Parallel programming",
+    "high-performance computing"
+  ],
+  "Common Lisp": [
+    "Artificial intelligence",
+    "scientific computing",
+    "symbolic computation",
+    "web development"
+  ],
+  "D": [
+    "Systems programming",
+    "game development",
+    "scientific computing"
+  ],
+  "Factor": [
+    "Concatenative programming",
+    "metaprogramming",
+    "DSL creation"
+  ],
+  "Forth": [
+    "Embedded systems",
+    "low-level systems programming",
+    "real-time applications"
+  ],
+  "Haxe": [
+    "Cross-platform development",
+    "web development",
+    "game development"
+  ],
+  "Icon": [
+    "Text processing",
+    "scripting",
+    "education",
+    "symbolic computation"
+  ],
+  "Io": [
+    "Web development",
+    "networking",
+    "distributed systems",
+    "game development"
+  ],
+  "J": [
+    "Numerical computing",
+    "scientific computing",
+    "data analysis"
+  ],
+  "K": [
+    "Numerical computing",
+    "data analysis",
+    "scientific computing"
+  ],
+  "LabVIEW": [
+    "Scientific and engineering applications",
+    "data acquisition and analysis",
+    "control systems"
+  ],
+  "Limbo": [
+    "Systems programming",
+    "network programming",
+    "distributed systems",
+    "security"
+  ],
+  "Logo": [
+    "Education",
+    "graphical programming",
+    "simple game development"
+  ],
+  "Mercury": [
+    "Logic programming",
+    "functional programming",
+    "constraint programming"
+  ],
+  "Mirah": [
+    "Android app development",
+    "game development"
+  ],
+  "Nim": [
+    "General-purpose programming",
+    "game development",
+    "scripting",
+    "systems programming"
+  ],
+  "Objective Caml": [
+    "Scientific computing",
+    "symbolic computation",
+    "artificial intelligence",
+    "systems programming"
+  ],
+  "Oz": [
+    "Artificial intelligence",
+    "concurrent programming",
+    "distributed programming"
+  ],
+  "Parrot": [
+    "Dynamic languages",
+    "virtual machines",
+    "compilers"
+  ],
+  "Pike": [
+    "Web development",
+    "networking",
+    "game development",
+    "systems programming"
+  ],
+  "PostScript": [
+    "Desktop publishing",
+    "document preparation",
+    "printing"
+  ],
+  "Processing": [
+    "Data visualization",
+    "interactive art",
+    "graphical user interfaces",
+    "education"
+  ],
+  "Pure Data": [
+    "Sound and music programming",
+    "data visualization",
+    "real-time interaction"
+  ],
+  "PureScript": [
+    "Web development",
+    "functional programming",
+    "front-end development"
+  ],
+  "Q": [
+    "Finance",
+    "big data processing",
+    "distributed computing"
+  ],
+  "REXX": [
+    "System administration",
+    "scripting",
+    "automation",
+    "networking",
+    "text processing"
+  ],
+  "RubyMotion": [
+    "Mobile app development for iOS and Android"
+  ],
+  "SAS": [
+    "Data analysis",
+    "statistical modeling",
+    "business intelligence"
+  ],
+  "Self": [
+    "Object-oriented programming",
+    "dynamic programming",
+    "experimentation"
+  ],
+  "SPARK": [
+    "High-assurance software development",
+    "concurrent and distributed programming"
+  ],
+  "Tcl/Tk": [
+    "Scripting",
+    "GUI development",
+    "automation",
+    "system administration"
+  ],
+  "VHDL": [
+    "Hardware description language",
+    "digital circuit design"
+  ],
+  "Visual Basic": [
+    "Windows desktop application development",
+    "database programming",
+    "automation"
+  ],
+  "Xojo": [
+    "Cross-platform desktop and web application development"
+  ],
+  "Xtend": [
+    "Object-oriented programming",
+    "domain-specific languages",
+    "Java bytecode generation"
+  ]
+}
