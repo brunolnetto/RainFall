@@ -1,0 +1,12 @@
+docutils==0.20.1
+lockfile==0.12.2
+luigi==3.3.0
+mrjob==0.7.4
+py4j==0.10.9.7
+pyspark==3.4.0
+python-daemon==3.0.1
+python-dateutil==2.8.2
+PyYAML==6.0
+six==1.16.0
+tenacity==8.2.2
+tornado==6.3.2

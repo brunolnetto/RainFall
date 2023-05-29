@@ -1,0 +1,9 @@
+{
+    "Infrastructure": ["Compute", "Storage", "Networking", "Security and Identity"],
+    "Data and Analytics": ["Database", "AI and Machine Learning", "Analytics and Big Data", "Data Integration and ETL"],
+    "Application Development and Deployment": ["Developer Tools", "Containers and Container Orchestration", "Serverless Computing", "Mobile and App Development", "Desktop Virtualization and Remote Desktop Services"],
+    "Industry-specific Solutions": ["Internet of Things (IoT)", "Media and Streaming Services", "Collaboration and Productivity Tools", "Business Process Automation", "Customer Relationship Management (CRM)", "Enterprise Resource Planning (ERP)", "Human Resources (HR) and Talent Management", "Supply Chain and Logistics Management", "Financial Services and Fintech", "Healthcare and Life Sciences", "E-commerce and Retail"],
+    "Operations and Infrastructure Management": ["Management and Monitoring", "Content Delivery and Edge Computing", "Migration and Transfer Services", "DevOps and Continuous Integration/Continuous Deployment (CI/CD)", "Data Governance and Compliance", "Disaster Recovery and Backup", "High-Performance Computing (HPC)"],
+    "Emerging Technologies": ["Blockchain", "Game Development", "Robotics and Automation", "Geospatial and Location-based Services", "Gaming and Simulation"]
+}
+
