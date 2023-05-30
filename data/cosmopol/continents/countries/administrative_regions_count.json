@@ -1,0 +1,594 @@
+{
+    "Afghanistan": {
+      "Provinces": 34
+    },
+    "Albania": {
+      "Counties": 12
+    },
+    "Algeria": {
+      "Provinces": 58
+    },
+    "Andorra": {
+      "Parishes": 7
+    },
+    "Angola": {
+      "Provinces": 18
+    },
+    "Antigua and Barbuda": {
+      "Parishes": 6
+    },
+    "Argentina": {
+      "Provinces": 23
+    },
+    "Armenia": {
+      "Provinces": 11
+    },
+    "Australia": {
+      "States and Territories": 6
+    },
+    "Austria": {
+      "States": 9
+    },
+    "Azerbaijan": {
+      "Regions": 10
+    },
+    "Bahamas": {
+      "Islands": 31
+    },
+    "Bahrain": {
+      "Governorates": 4
+    },
+    "Bangladesh": {
+      "Divisions": 8
+    },
+    "Barbados": {
+      "Parishes": 11
+    },
+    "Belarus": {
+      "Regions": 6
+    },
+    "Belgium": {
+      "Regions": 3
+    },
+    "Belize": {
+      "Districts": 6
+    },
+    "Benin": {
+      "Departments": 12
+    },
+    "Bhutan": {
+      "Districts": 20
+    },
+    "Bolivia": {
+      "Departments": 9
+    },
+    "Bosnia and Herzegovina": {
+      "Entities": 2
+    },
+    "Botswana": {
+      "Districts": 16
+    },
+    "Brazil": {
+      "States": 26,
+      "Federal District": 1
+    },
+    "Brunei": {
+      "Districts": 4
+    },
+    "Bulgaria": {
+      "Provinces": 28
+    },
+    "Burkina Faso": {
+      "Regions": 13
+    },
+    "Burundi": {
+      "Provinces": 18
+    },
+    "Cambodia": {
+      "Provinces": 25
+    },
+    "Cameroon": {
+      "Regions": 10
+    },
+    "Canada": {
+      "Provinces and Territories": 13
+    },
+    "Cape Verde": {
+      "Municipalities": 22
+    },
+    "Central African Republic": {
+      "Prefectures": 16
+    },
+    "Chad": {
+      "Regions": 23
+    },
+    "Chile": {
+      "Regions": 16
+    },
+    "China": {
+      "Provinces": 23,
+      "Autonomous Regions": 5,
+      "Municipalities": 4,
+      "Special Administrative Regions": 2
+    },
+    "Colombia": {
+      "Departments": 32
+    },
+    "Comoros": {
+      "Islands": 3
+    },
+    "Costa Rica": {
+      "Provinces": 7
+    },
+    "Croatia": {
+      "Counties": 20
+    },
+    "Cuba": {
+      "Provinces": 15
+    },
+    "Cyprus": {
+      "Districts": 6
+    },
+    "Czech Republic": {
+      "Regions": 13
+    },
+    "Democratic Republic of the Congo": {
+      "Provinces": 26
+    },
+    "Denmark": {
+      "Regions": 5
+    },
+    "Djibouti": {
+      "Regions": 5
+    },
+    "Dominica": {
+      "Parishes": 10
+    },
+    "Dominican Republic": {
+      "Provinces": 31
+    },
+    "East Timor": {
+      "Municipalities": 13
+    },
+    "Ecuador": {
+      "Provinces": 24
+    },
+    "Egypt": {
+      "Governorates": 27
+    },
+    "El Salvador": {
+      "Departments": 14
+    },
+    "Equatorial Guinea": {
+      "Provinces": 8
+    },
+    "Eritrea": {
+      "Regions": 6
+    },
+    "Estonia": {
+      "Counties": 15
+    },
+    "Eswatini": {
+      "Regions": 4
+    },
+    "Ethiopia": {
+      "Regions": 9
+    },
+    "Fiji": {
+      "Divisions": 14
+    },
+    "Finland": {
+      "Regions": 19
+    },
+    "France": {
+      "Regions": 18,
+      "Overseas Departments and Regions": 5
+    },
+    "Gabon": {
+      "Provinces": 9
+    },
+    "Gambia": {
+      "Divisions": 6
+    },
+    "Georgia": {
+      "Regions": 9
+    },
+    "Germany": {
+      "States": 16
+    },
+    "Ghana": {
+      "Regions": 16
+    },
+    "Greece": {
+      "Regions": 13
+    },
+    "Grenada": {
+      "Parishes": 6
+    },
+    "Guatemala": {
+      "Departments": 22
+    },
+    "Guinea": {
+      "Regions": 8
+    },
+    "Guinea-Bissau": {
+      "Regions": 8
+    },
+    "Guyana": {
+      "Regions": 10
+    },
+    "Haiti": {
+      "Departments": 10
+    },
+    "Honduras": {
+      "Departments": 18
+    },
+    "Hungary": {
+      "Counties": 19
+    },
+    "Iceland": {
+      "Regions": 8
+    },
+    "India": {
+      "States and Union Territories": 28
+    },
+    "Indonesia": {
+      "Provinces": 34
+    },
+    "Iran": {
+      "Provinces": 31
+    },
+    "Iraq": {
+      "Governorates": 18
+    },
+    "Ireland": {
+      "Counties": 26
+    },
+    "Israel": {
+      "Districts": 6
+    },
+    "Italy": {
+      "Regions": 20
+    },
+    "Jamaica": {
+      "Parishes": 14
+    },
+    "Japan": {
+      "Prefectures": 47
+    },
+    "Jordan": {
+      "Governorates": 12
+    },
+    "Kazakhstan": {
+      "Regions": 14
+    },
+    "Kenya": {
+      "Counties": 47
+    },
+    "Kiribati": {
+      "Island Groups": 3
+    },
+    "Kosovo": {
+      "Districts": 7
+    },
+    "Kuwait": {
+      "Governorates": 6
+    },
+    "Kyrgyzstan": {
+      "Regions": 7
+    },
+    "Laos": {
+      "Provinces": 18
+    },
+    "Latvia": {
+      "Municipalities": 9
+    },
+    "Lebanon": {
+      "Governorates": 8
+    },
+    "Lesotho": {
+      "Districts": 10
+    },
+    "Liberia": {
+      "Counties": 15
+    },
+    "Libya": {
+      "Districts": 22
+    },
+    "Liechtenstein": {
+      "Municipalities": 11
+    },
+    "Lithuania": {
+      "Counties": 10
+    },
+    "Luxembourg": {
+      "Districts": 3
+    },
+    "Madagascar": {
+      "Regions": 22
+    },
+    "Malawi": {
+      "Regions": 28
+    },
+    "Malaysia": {
+      "States and Federal Territories": 13
+    },
+    "Maldives": {
+      "Atolls": 26
+    },
+    "Mali": {
+      "Regions": 10
+    },
+    "Malta": {
+      "Regions": 5
+    },
+    "Marshall Islands": {
+      "Municipalities": 24
+    },
+    "Mauritania": {
+      "Regions": 15
+    },
+    "Mauritius": {
+      "Districts": 9
+    },
+    "Mexico": {
+      "States": 31,
+      "Federal District": 1
+    },
+    "Micronesia": {
+      "States": 4
+    },
+    "Moldova": {
+      "Districts": 32
+    },
+    "Monaco": {
+      "Wards": 10
+    },
+    "Mongolia": {
+      "Provinces": 21
+    },
+    "Montenegro": {
+      "Municipalities": 23
+    },
+    "Morocco": {
+      "Regions": 12
+    },
+    "Mozambique": {
+      "Provinces": 11
+    },
+    "Myanmar": {
+      "States and Regions": 14
+    },
+    "Namibia": {
+      "Regions": 14
+    },
+    "Nauru": {
+      "Districts": 14
+    },
+    "Nepal": {
+      "Provinces": 7
+    },
+    "Netherlands": {
+      "Provinces": 12
+    },
+    "New Zealand": {
+      "Regions": 16
+    },
+    "Nicaragua": {
+      "Departments": 17
+    },
+    "Niger": {
+      "Regions": 7
+    },
+    "Nigeria": {
+      "States": 36
+    },
+    "North Korea": {
+      "Provinces": 9
+    },
+    "North Macedonia": {
+      "Municipalities": 80
+    },
+    "Norway": {
+      "Counties": 18
+    },
+    "Oman": {
+      "Governorates": 11
+    },
+    "Pakistan": {
+      "Provinces": 4,
+      "Territories": 2
+    },
+    "Palau": {
+      "States": 16
+    },
+    "Panama": {
+      "Provinces": 10
+    },
+    "Papua New Guinea": {
+      "Provinces": 22
+    },
+    "Paraguay": {
+      "Departments": 17
+    },
+    "Peru": {
+      "Regions": 25
+    },
+    "Philippines": {
+      "Regions": 17
+    },
+    "Poland": {
+      "Voivodeships": 16
+    },
+    "Portugal": {
+      "Districts": 18
+    },
+    "Qatar": {
+      "Municipalities": 8
+    },
+    "Republic of the Congo": {
+      "Departments": 10
+    },
+    "Romania": {
+      "Counties": 41
+    },
+    "Russia": {
+      "Federal Subjects": 85
+    },
+    "Rwanda": {
+      "Provinces": 5
+    },
+    "Saint Kitts and Nevis": {
+      "Parishes": 14
+    },
+    "Saint Lucia": {
+      "Districts": 11
+    },
+    "Saint Vincent and the Grenadines": {
+      "Parishes": 6
+    },
+    "Samoa": {
+      "Districts": 11
+    },
+    "San Marino": {
+      "Municipalities": 9
+    },
+    "Sao Tome and Principe": {
+      "Districts": 6
+    },
+    "Saudi Arabia": {
+      "Regions": 13
+    },
+    "Senegal": {
+      "Regions": 14
+    },
+    "Serbia": {
+      "Districts": 30
+    },
+    "Seychelles": {
+      "Districts": 26
+    },
+    "Sierra Leone": {
+      "Provinces": 4
+    },
+    "Singapore": {
+      "Regions": 5
+    },
+    "Slovakia": {
+      "Regions": 8
+    },
+    "Slovenia": {
+      "Municipalities": 212
+    },
+    "Solomon Islands": {
+      "Provinces": 9
+    },
+    "Somalia": {
+      "Regions": 18
+    },
+    "South Africa": {
+      "Provinces": 9
+    },
+    "South Korea": {
+      "Provinces": 17,
+      "Metropolitan Cities": 6
+    },
+    "South Sudan": {
+      "States": 10
+    },
+    "Spain": {
+      "Autonomous Communities": 17
+    },
+    "Sri Lanka": {
+      "Provinces": 9
+    },
+    "Sudan": {
+      "States": 18
+    },
+    "Suriname": {
+      "Districts": 10
+    },
+    "Switzerland": {
+      "Cantons": 26
+    },
+    "Syria": {
+      "Governorates": 14
+    },
+    "Taiwan": {
+      "Municipalities": 6
+    },
+    "Tajikistan": {
+      "Regions": 4
+    },
+    "Tanzania": {
+      "Regions": 31
+    },
+    "Thailand": {
+      "Provinces": 77
+    },
+    "Togo": {
+      "Regions": 5
+    },
+    "Tonga": {
+      "Islands": 5
+    },
+    "Trinidad and Tobago": {
+      "Regions": 14
+    },
+    "Tunisia": {
+      "Governorates": 24
+    },
+    "Turkey": {
+      "Provinces": 81
+    },
+    "Turkmenistan": {
+      "Provinces": 5
+    },
+    "Tuvalu": {
+      "Islands": 9
+    },
+    "Uganda": {
+      "Regions": 4
+    },
+    "Ukraine": {
+      "Oblast": 24
+    },
+    "United Arab Emirates": {
+      "Emirates": 7
+    },
+    "United Kingdom": {
+      "Countries": 4
+    },
+    "United States": {
+      "States": 50,
+      "Territories": 16
+    },
+    "Uruguay": {
+      "Departments": 19
+    },
+    "Uzbekistan": {
+      "Regions": 12
+    },
+    "Vanuatu": {
+      "Provinces": 6
+    },
+    "Vatican City": {
+      "Districts": 1
+    },
+    "Venezuela": {
+      "States": 23
+    },
+    "Vietnam": {
+      "Provinces": 58
+    },
+    "Yemen": {
+      "Governorates": 22
+    },
+    "Zambia": {
+      "Provinces": 10
+    },
+    "Zimbabwe": {
+      "Provinces": 10
+    }
+  }
+  
