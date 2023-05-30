@@ -1,0 +1,107 @@
+{
+    "French Guiana": {
+    "Departments": ["French Guiana"]
+    },
+    "Akrotiri and Dhekelia": {
+    "Districts": ["Akrotiri", "Dhekelia"]
+    },
+    "Åland Islands": {
+    "Municipalities": ["Brändö", "Eckerö", "Finström", "Föglö", "Geta", "Hammarland", "Jomala", "Kumlinge", "Kökar", "Lemland", "Lumparland", "Mariehamn", "Saltvik", "Sottunga", "Sund", "Vårdö"]
+    },
+    "Anguilla": {
+    "Districts": ["Anguilla", "District 1", "District 2", "District 3", "District 4", "District 5", "District 6", "District 7", "District 8", "District 9", "District 10", "District 11", "District 12", "District 13", "District 14"]
+    },
+    "Aruba": {
+    "Regions": ["Aruba"]
+    },
+    "Bermuda": {
+    "Parishes": ["Devonshire", "Hamilton", "Paget", "Pembroke", "Saint George's", "Sandys", "Smith's", "Southampton", "Warwick"]
+    },
+    "British Indian Ocean Territory": {
+    "Islands": ["Diego Garcia", "Eagle Islands", "East Island", "Middle Island", "Northeast Island", "Peros Banhos", "Salomon Islands"]
+    },
+    "British Virgin Islands": {
+    "Districts": ["Anegada", "Jost Van Dyke", "Tortola", "Virgin Gorda", "District 5", "District 6", "District 7", "District 8", "District 9"]
+    },
+    "Cayman Islands": {
+    "Districts": ["Bodden Town", "Cayman Brac", "East End", "George Town", "Little Cayman", "North Side"]
+    },
+    "Cook Islands": {
+    "Islands": ["Aitutaki", "Atiu", "Ma'uke", "Manihiki", "Mauke", "Mitiaro", "Nassau", "Palmerston", "Penrhyn", "Pukapuka", "Rakahanga", "Rarotonga", "Suwarrow", "Takutea", "Manuae"]
+    },
+    "Curaçao": {
+    "Municipalities": ["Curaçao", "Bandabou", "Bandariba", "Oost"]
+    },
+    "Faroe Islands": {
+    "Regions": ["Eysturoy", "Norðoyar", "Sandoy", "Streymoy", "Suðuroy", "Vágar"]
+    },
+    "Gibraltar": {
+    "Districts": ["Gibraltar"]
+    },
+    "Greenland": {
+    "Municipalities": ["Avannaata", "Kujalleq", "Qeqertalik", "Qeqqata", "Sermersooq"]
+    },
+    "Guadeloupe": {
+    "Arrondissements": ["Basse-Terre", "Pointe-à-Pitre"]
+    },
+    "Guam": {
+    "Municipalities": ["Agana Heights", "Agat", "Asan-Maina", "Barrigada", "Chalan-Pago-Ordot", "Dededo", "Hagåtña", "Inarajan", "Mangilao", "Merizo", "Mongmong-Toto-Maite", "Piti", "Santa Rita", "Sinajana", "Talofofo", "Tamuning", "Umatac", "Yigo", "Yona"]
+    },
+    "Hong Kong": {
+    "Districts": ["Central and Western", "Eastern", "Islands", "Kowloon City", "Kwai Tsing", "Kwun Tong", "North", "Sai Kung", "Sha Tin", "Sham Shui Po", "Southern", "Tai Po", "Tsuen Wan", "Tuen Mun", "Wan Chai", "Wong Tai Sin", "Yau Tsim Mong", "Yuen Long"]
+    },
+    "Macau": {
+    "Parishes": ["Nossa Senhora de Fátima", "Santo António", "São Lázaro", "São Lourenço", "São Francisco Xavier", "Cathedral Parish", "St. Lawrence Parish"]
+    },
+    "Martinique": {
+    "Arrondissements": ["Fort-de-France", "La Trinité", "Le Marin", "Saint-Pierre"]
+    },
+    "Mayotte": {
+    "Cantons": ["Bandraboua", "Bandrélé", "Bouéni", "Chiconi", "Chirongui", "Dembeni", "Dzaoudzi", "Kani-Kéli", "Koungou", "M'Tsangamouji", "Mamoudzou-1", "Mamoudzou-2", "Mamoudzou-3", "Mamoudzou-4", "Mtsamboro", "Ouangani", "Pamandzi", "Sada"]
+    },
+    "Montserrat": {
+    "Parishes": ["Saint Anthony", "Saint Georges", "Saint Peter"]
+    },
+    "New Caledonia": {
+    "Provinces": ["South Province", "Loyalty Islands Province", "North Province"]
+    },
+    "Niue": {
+    "Villages": ["Alofi", "Avatele", "Hakupu", "Hikutavake", "Lakepa", "Liku", "Makefu", "Mutalau", "Namukulu", "Tamakautoga", "Toi", "Tuapa", "Vaiea", "Alofi South", "Alofi North"]
+    },
+    "Norfolk Island": {
+    "Territories": ["Norfolk Island"]
+    },
+    "Northern Mariana Islands": {
+    "Municipalities": ["Rota", "Saipan", "Tinian", "Northern Islands"]
+    },
+    "Puerto Rico": {
+    "Municipalities": ["Adjuntas", "Aguada", "Aguadilla", "Aguas Buenas", "Aibonito", "Añasco", "Arecibo", "Arroyo", "Barceloneta", "Barranquitas", "Bayamón", "Cabo Rojo", "Caguas", "Camuy", "Canóvanas", "Carolina", "Cataño", "Cayey", "Ceiba", "Ciales", "Cidra", "Coamo", "Comerío", "Corozal", "Culebra", "Dorado", "Fajardo", "Florida", "Guanica", "Guayama", "Guayanilla", "Guaynabo", "Gurabo", "Hatillo", "Hormigueros", "Humacao", "Isabela", "Jayuya", "Juana Díaz", "Juncos", "Lajas", "Lares", "Las Marías", "Las Piedras", "Loiza", "Luquillo", "Manatí", "Maricao", "Maunabo", "Mayagüez", "Moca", "Morovis", "Naguabo", "Naranjito", "Orocovis", "Patillas", "Peñuelas", "Ponce", "Quebradillas", "Rincón", "Rio Grande", "Sabana Grande", "Salinas", "San Germán", "San Juan", "San Lorenzo", "San Sebastián", "Santa Isabel", "Toa Alta", "Toa Baja", "Trujillo Alto", "Utuado", "Vega Alta", "Vega Baja", "Vieques", "Villalba", "Yabucoa", "Yauco"]
+    },
+    "Réunion": {
+    "Arrondissements": ["Saint-Benoît", "Saint-Denis", "Saint-Paul", "Saint-Pierre"]
+    },
+    "Saint Barthélemy": {
+    "Communes": ["Saint Barthélemy"]
+    },
+    "Saint Martin": {
+    "Communes": ["Saint Martin", "Lowlands"]
+    },
+    "Saint Pierre and Miquelon": {
+    "Communes": ["Miquelon-Langlade", "Saint-Pierre"]
+    },
+    "Sint Maarten": {
+    "Districts": ["Sint Maarten", "Lower Prince's Quarter"]
+    },
+    "Tokelau": {
+    "Atolls": ["Atafu", "Nukunonu", "Fakaofo"]
+    },
+    "Turks and Caicos Islands": {
+    "Districts": ["Grand Turk", "Middle Caicos", "North Caicos", "Providenciales and West Caicos", "Salt Cay", "South Caicos", "East Caicos"]
+    },
+    "U.S. Virgin Islands": {
+    "Districts": ["Saint Croix", "Saint John", "Saint Thomas"]
+    },
+    "Wallis and Futuna": {
+    "Districts": ["Alo", "Hahake", "Hihifo"]
+    }
+    }
