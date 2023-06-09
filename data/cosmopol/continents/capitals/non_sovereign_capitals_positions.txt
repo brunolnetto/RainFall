@@ -1,0 +1,36 @@
+Cayenne,French Guiana,3.9339, -53.1258
+Undefined capital of Akrotiri and Dhekelia,Akrotiri and Dhekelia,34.5844, 32.9876
+Undefined capital of Åland Islands,Åland Islands,60.1785, 19.9156
+Undefined capital of Anguilla,Anguilla,18.2206, -63.0686
+Undefined capital of Aruba,Aruba,12.5211, -69.9683
+Undefined capital of Bermuda,Bermuda,32.3078, -64.7505
+Undefined capital of British Indian Ocean Territory,British Indian Ocean Territory,-7.3343, 72.4244
+Undefined capital of British Virgin Islands,British Virgin Islands,18.4207, -64.6399
+Undefined capital of Cayman Islands,Cayman Islands,19.3133, -81.2546
+Undefined capital of Cook Islands,Cook Islands,-21.2367, -159.7777
+Undefined capital of Curaçao,Curaçao,12.1696, -68.9900
+Undefined capital of Faroe Islands,Faroe Islands,61.8926, -6.9118
+Cayenne,French Guiana,3.9339, -53.1258
+Undefined capital of Gibraltar,Gibraltar,36.1377, -5.3453
+Undefined capital of Greenland,Greenland,71.7069, -42.6043
+Undefined capital of Guadeloupe,Guadeloupe,16.2650, -61.5510
+Undefined capital of Guam,Guam,13.4443, 144.7937
+Undefined capital of Hong Kong,Hong Kong,22.3193, 114.1694
+Undefined capital of Macau,Macau,22.1987, 113.5439
+Undefined capital of Martinique,Martinique,14.6415, -61.0242
+Undefined capital of Mayotte,Mayotte,-12.8275, 45.1662
+Undefined capital of Montserrat,Montserrat,16.7425, -62.1874
+Undefined capital of New Caledonia,New Caledonia,-20.9043, 165.6180
+Undefined capital of Niue,Niue,-19.0535, -169.8672
+Undefined capital of Norfolk Island,Norfolk Island,-29.0329, 167.9522
+Undefined capital of Northern Mariana Islands,Northern Mariana Islands,15.0979, 145.6739
+Undefined capital of Puerto Rico,Puerto Rico,18.2208, -66.5901
+Undefined capital of Réunion,Réunion,-21.1151, 55.5364
+Undefined capital of Saint Barthélemy,Saint Barthélemy,17.9000, -62.8333
+Undefined capital of Saint Martin,Saint Martin,18.0708, -63.0501
+Undefined capital of Saint Pierre and Miquelon,Saint Pierre and Miquelon,46.7778, -56.1779
+Undefined capital of Sint Maarten,Sint Maarten,18.0425, -63.0548
+Undefined capital of Tokelau,Tokelau,-9.2014, -171.8484
+Undefined capital of Turks and Caicos Islands,Turks and Caicos Islands,21.6940, -71.7979
+Undefined capital of U.S. Virgin Islands,U.S. Virgin Islands,18.3358, -64.8963
+Undefined capital of Wallis and Futuna,Wallis and Futuna,-13.7687, -177.1561
