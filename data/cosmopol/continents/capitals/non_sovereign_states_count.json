@@ -1,0 +1,107 @@
+{
+    "French Guiana": {
+    "Departments": 1
+    },
+    "Akrotiri and Dhekelia": {
+    "Districts": 2
+    },
+    "Åland Islands": {
+    "Municipalities": 16
+    },
+    "Anguilla": {
+    "Districts": 14
+    },
+    "Aruba": {
+    "Regions": 1
+    },
+    "Bermuda": {
+    "Parishes": 9
+    },
+    "British Indian Ocean Territory": {
+    "Islands": 7
+    },
+    "British Virgin Islands": {
+    "Districts": 9
+    },
+    "Cayman Islands": {
+    "Districts": 6
+    },
+    "Cook Islands": {
+    "Islands": 15
+    },
+    "Curaçao": {
+    "Municipalities": 5
+    },
+    "Faroe Islands": {
+    "Regions": 6
+    },
+    "Gibraltar": {
+    "Districts": 1
+    },
+    "Greenland": {
+    "Municipalities": 4
+    },
+    "Guadeloupe": {
+    "Arrondissements": 2
+    },
+    "Guam": {
+    "Municipalities": 19
+    },
+    "Hong Kong": {
+    "Districts": 18
+    },
+    "Macau": {
+    "Parishes": 7
+    },
+    "Martinique": {
+    "Arrondissements": 4
+    },
+    "Mayotte": {
+    "Cantons": 17
+    },
+    "Montserrat": {
+    "Parishes": 3
+    },
+    "New Caledonia": {
+    "Provinces": 3
+    },
+    "Niue": {
+    "Villages": 14
+    },
+    "Norfolk Island": {
+    "Territories": 1
+    },
+    "Northern Mariana Islands": {
+    "Municipalities": 4
+    },
+    "Puerto Rico": {
+    "Municipalities": 78
+    },
+    "Réunion": {
+    "Arrondissements": 4
+    },
+    "Saint Barthélemy": {
+    "Communes": 1
+    },
+    "Saint Martin": {
+    "Communes": 2
+    },
+    "Saint Pierre and Miquelon": {
+    "Communes": 2
+    },
+    "Sint Maarten": {
+    "Districts": 2
+    },
+    "Tokelau": {
+    "Atolls": 3
+    },
+    "Turks and Caicos Islands": {
+    "Districts": 14
+    },
+    "U.S. Virgin Islands": {
+    "Districts": 3
+    },
+    "Wallis and Futuna": {
+    "Districts": 3
+    }
+    }
