@@ -11,4 +11,4 @@ COPY predict_fun.py ${LAMBDA_TASK_ROOT}
 COPY model.pickle ${LAMBDA_TASK_ROOT}
 
 # Set the CMD to your handler
-CMD [ "predict_sklearn.predict" ]
+CMD [ "predict_fun.predict" ]
