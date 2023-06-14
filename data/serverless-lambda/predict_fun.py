@@ -1,14 +1,16 @@
 import json
 
-## REPLACE WITH:
-#   - Your trained model
-
 ## By loading the pickle outside `predict`,
 ## we re-use it across different Lambda calls for the same execution instance
 # 
 # import cloudpickle
 # with open('model.pickle', 'rb') as f:
 #     model = cloudpickle.load(f)
+
+# REPLACE WITH: 
+#   - command call model.predict(payliad).tolist()
+def make_prediction(payload):
+    return map(lambda x: x**2, payload)
 
 def api_return(body, status):
     return {
@@ -23,7 +25,7 @@ def validate_event(event, context):
     body=event['body']
 
     # REPLACE WITH: 
-#   - Custom validation elif steps 
+    #   - Custom validation elif steps 
     if isinstance(body, float):
         payload = [body]
 
@@ -42,17 +44,11 @@ def validate_event(event, context):
 
     return payload
 
-# REPLACE WITH: 
-#   - command call model.predict(payliad).tolist()
-def make_prediction(payload):
-    return map(lambda x: x**2, payload)
-
 # Prediction
 def predict(event, context):
     payload=validate_event(event, context)
     
     try:
-        
         output = make_prediction(payload)
     
     except Exception as e:
