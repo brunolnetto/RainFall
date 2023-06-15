@@ -10,7 +10,8 @@ import json
 # REPLACE WITH: 
 #   - command call model.predict(payliad).tolist()
 def make_prediction(payload):
-    return map(lambda x: x**2, payload)
+    return '42'
+    #return list(map(lambda x: x**2, payload))
 
 def api_return(body, status):
     return {
