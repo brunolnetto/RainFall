@@ -67,17 +67,12 @@
     "AWS DeepLens",
     "AWS DeepComposer"
   ],
-  "Management and Monitoring": [
+  "Management": [
     "AWS CloudFormation",
-    "AWS CloudTrail",
     "AWS Elastic Beanstalk",
     "AWS Systems Manager",
     "AWS OpsWorks",
     "AWS Config",
-    "AWS CloudWatch",
-    "AWS CloudWatch Logs",
-    "AWS CloudWatch Events",
-    "AWS CloudWatch Synthetics",
     "AWS Service Catalog",
     "AWS Control Tower",
     "AWS Well-Architected Tool",
@@ -87,18 +82,27 @@
     "AWS AppConfig",
     "AWS Chatbot"
   ],
-  "Migration and Transfer": [
+  "Monitoring": [
+    "AWS CloudTrail",
+    "AWS CloudWatch",
+    "AWS CloudWatch Logs",
+    "AWS CloudWatch Events",
+    "AWS CloudWatch Synthetics"
+  ],
+  "Migration": [
     "AWS Snowball",
     "AWS Database Migration Service (DMS)",
     "AWS Application Discovery Service",
-    "AWS DataSync",
     "AWS Server Migration Service",
+    "AWS Migration Hub"
+  ],
+  "Transfer": [
+    "AWS DataSync",
     "AWS Transfer Family",
-    "AWS Migration Hub",
     "AWS Data Pipeline",
     "AWS Glue"
   ],
-  "Analytics and Machine Learning": [
+  "Analytics": [
     "Amazon Kinesis",
     "AWS Glue",
     "Amazon Redshift",
@@ -114,17 +118,16 @@
     "Amazon Timestream",
     "AWS Data Lake Analytics",
     "AWS Data Explorer",
-    "Amazon QuickSight",
+    "Amazon QuickSight"
+  ],
+  "Machine Learning": [
     "AWS Key Management Service (KMS)",
     "AWS Identity and Access Management (IAM)",
     "Amazon Cognito",
     "AWS Single Sign-On",
     "AWS Secrets Manager",
     "AWS Artifact",
-    "AWS Security Hub",
-    "AWS Identity and Access Management (IAM)",
-    "AWS Secrets Manager",
-    "AWS Artifact"
+    "AWS Security Hub"
   ],
   "Storage": [
     "Amazon Simple Storage Service (S3)",
@@ -142,16 +145,13 @@
     "AWS Snowball",
     "AWS Snowcone"
   ],
-  "Security and Identity": [
-    "AWS Identity and Access Management (IAM)",
+  "Security": [
     "AWS Key Management Service (KMS)",
     "AWS CloudHSM",
     "AWS Certificate Manager",
     "AWS Secrets Manager",
     "AWS Security Token Service (STS)",
     "AWS Directory Service",
-    "Amazon Cognito",
-    "AWS Single Sign-On",
     "AWS Secrets Manager",
     "AWS Artifact",
     "Amazon GuardDuty",
@@ -159,12 +159,17 @@
     "AWS Firewall Manager",
     "AWS Shield",
     "AWS Macie",
-    "AWS Security Hub",
-    "AWS Resource Access Manager",
+    "AWS Security Hub"
+  ],
+  "Identity": [
+    "AWS Identity and Access Management (IAM)",
+    "Amazon Cognito",
+    "AWS Single Sign-On",
     "AWS Secrets Manager",
+    "AWS Resource Access Manager",
     "AWS Identity and Access Management (IAM)"
   ],
-  "Media and Content Delivery": [
+  "Media Delivery": [
     "Amazon CloudFront",
     "Amazon Elastic Transcoder",
     "Amazon Polly",
@@ -172,6 +177,15 @@
     "Amazon Transcribe",
     "Amazon Translate",
     "AWS Elemental MediaConvert",
+    "AWS Elemental MediaPackage",
+    "AWS Elemental MediaLive",
+    "AWS Elemental MediaStore",
+    "AWS Elemental MediaTailor",
+    "Amazon Interactive Video Service",
+    "AWS Media Services"
+  ],
+  "Content Delivery": [
+    "Amazon CloudFront",
     "AWS Elemental MediaPackage",
     "AWS Elemental MediaLive",
     "AWS Elemental MediaStore",
@@ -197,32 +211,23 @@
     "AWS DMS",
     "Amazon ElastiCache"
   ],
-  "Mobile and IoT": [
-    "AWS IoT Core",
-    "AWS IoT Analytics",
-    "AWS IoT Device Management",
+  "Mobile": [
     "AWS AppSync",
     "AWS Amplify",
     "Amazon Pinpoint",
     "AWS Mobile Hub",
-    "AWS Device Farm",
-    "AWS Snowball",
-    "AWS Snowcone",
-    "AWS Snowmobile",
+    "AWS Device Farm"
+  ],
+  "IoT": [
+    "AWS IoT Core",
+    "AWS IoT Analytics",
+    "AWS IoT Device Management",
     "Amazon FreeRTOS",
     "AWS Greengrass",
     "AWS RoboMaker",
     "AWS DeepRacer",
     "AWS IoT 1-Click",
     "AWS IoT Button",
-    "AWS IoT SiteWise",
-    "AWS IoT Things Graph",
-    "AWS IoT Events",
-    "AWS IoT Fleet Hub",
-    "AWS IoT Greengrass V2",
-    "AWS IoT Jobs",
-    "AWS IoT Secure Tunneling",
-    "AWS IoT Sitewise",
     "AWS IoT SiteWise",
     "AWS IoT Things Graph",
     "AWS IoT Events",
