@@ -32,6 +32,9 @@ def validate_event(event, context):
 
     elif isinstance(body, list):
         payload = body
+
+    elif isinstance(body, str):
+        payload = json.loads(body)
     
     else:
         error_json={'error': 'Unknown input format'}
