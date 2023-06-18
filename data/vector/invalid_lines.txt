@@ -1,0 +1,90 @@
+mai 28 19:29:29 falcon vector[1695]: 2023-05-28T22:29:29.858586Z  INFO vector: Vector has stopped.
+mai 28 19:29:29 falcon systemd[1]: Stopping Vector...
+mai 28 19:29:29 falcon vector[1695]: 2023-05-28T22:29:29.888066Z  INFO vector::topology::running: Shutting down... Waiting on running components. remaining_components="print, parse_logs, dummy_logs" time_remaining="59 seconds left"
+mai 28 19:29:30 falcon systemd[1]: vector.service: Succeeded.
+mai 28 19:29:30 falcon systemd[1]: Stopped Vector.
+mai 28 19:30:15 falcon systemd[1]: Starting Vector...
+-- Reboot --
+mai 28 19:30:15 falcon vector[1587]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:30:15 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:30:15 falcon vector[1587]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 19:30:15 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 19:35:26 falcon systemd[1]: Starting Vector...
+mai 28 19:35:27 falcon vector[1502]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:30:15 falcon systemd[1]: Failed to start Vector.
+-- Reboot --
+mai 28 19:35:27 falcon vector[1502]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 19:35:27 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:35:27 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 19:35:27 falcon systemd[1]: Failed to start Vector.
+mai 28 19:39:03 falcon systemd[1]: Starting Vector...
+-- Reboot --
+mai 28 19:39:04 falcon vector[2041]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:39:04 falcon vector[2041]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 19:39:04 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:39:04 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 19:39:04 falcon systemd[1]: Failed to start Vector.
+-- Reboot --
+mai 28 19:41:36 falcon systemd[1]: Starting Vector...
+mai 28 19:41:36 falcon vector[1517]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 19:41:36 falcon vector[1517]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:41:36 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 19:41:36 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:41:36 falcon systemd[1]: Failed to start Vector.
+-- Reboot --
+mai 28 19:45:12 falcon vector[4591]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:45:12 falcon systemd[1]: Starting Vector...
+mai 28 19:45:12 falcon vector[4591]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 19:45:12 falcon systemd[1]: Failed to start Vector.
+mai 28 19:45:12 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:45:12 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+-- Reboot --
+mai 28 19:50:03 falcon systemd[1]: Starting Vector...
+mai 28 19:50:03 falcon vector[1511]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:50:03 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 19:50:03 falcon systemd[1]: Failed to start Vector.
+mai 28 19:50:03 falcon vector[1511]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+-- Reboot --
+mai 28 19:50:03 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:56:01 falcon systemd[1]: Starting Vector...
+mai 28 19:56:01 falcon vector[1530]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 19:56:01 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 19:56:01 falcon vector[1530]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+-- Reboot --
+mai 28 19:56:01 falcon systemd[1]: Failed to start Vector.
+mai 28 19:56:01 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 20:03:53 falcon vector[1527]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 20:03:52 falcon systemd[1]: Starting Vector...
+mai 28 20:03:53 falcon vector[1527]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 20:03:53 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 20:03:53 falcon systemd[1]: Failed to start Vector.
+mai 28 20:03:53 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+-- Reboot --
+mai 28 20:06:19 falcon vector[1557]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 20:06:19 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 20:06:19 falcon vector[1557]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 20:06:19 falcon systemd[1]: Starting Vector...
+mai 28 20:06:19 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+-- Reboot --
+mai 28 20:06:19 falcon systemd[1]: Failed to start Vector.
+mai 28 20:14:20 falcon systemd[1]: Starting Vector...
+mai 28 20:14:21 falcon vector[1507]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 20:14:21 falcon vector[1507]: x Could not create subdirectory "validate_tmp" inside of data dir "/var/lib/vector/": No space left on device (os error 28)
+mai 28 20:14:21 falcon systemd[1]: vector.service: Failed with result 'exit-code'.
+mai 28 20:14:21 falcon systemd[1]: vector.service: Control process exited, code=exited, status=78/CONFIG
+mai 28 20:14:21 falcon systemd[1]: Failed to start Vector.
+mai 28 20:31:00 falcon vector[1644]: √ Loaded ["/etc/vector/vector.toml"]
+mai 28 20:31:00 falcon systemd[1]: Starting Vector...
+mai 28 20:31:00 falcon vector[1644]: ------------------------------------
+-- Reboot --
+mai 28 20:31:00 falcon vector[1644]: √ Health check "print"
+mai 28 20:31:00 falcon vector[1644]:                            Validated
+mai 28 20:31:00 falcon vector[1644]: √ Component configuration
+mai 28 20:31:00 falcon systemd[1]: Started Vector.
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.478383Z  INFO vector::app: Internal log rate limit configured. internal_log_rate_secs=10
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.478935Z  INFO vector::app: Loading configs. paths=["/etc/vector/vector.toml"]
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.491145Z  INFO vector::topology::builder: Healthcheck: Passed.
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.478895Z  INFO vector::app: Log level is enabled. level="vector=info,codec=info,vrl=info,file_source=info,tower_limit=trace,rdkafka=info,buffers=info,lapin=info,kube=info"
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.491036Z  INFO vector::topology::running: Running healthchecks.
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.491418Z  INFO vector::app: API is disabled, enable by setting `api.enabled` to `true` and use commands like `vector top`.
+mai 28 20:31:00 falcon vector[1674]: 2023-05-28T23:31:00.491369Z  INFO vector: Vector has started. debug="false" version="0.25.1" arch="x86_64" revision="9125a99 2022-11-07"
