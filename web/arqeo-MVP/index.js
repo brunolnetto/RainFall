@@ -1,4 +1,4 @@
-import { is } from "arqeo"
-import { isNumber } from "lodash"
+import arqeo from "arqeo"
+import _ from "lodash"
 
-console.log(is([1,2,3], isNumber))
+console.log(arqeo.is([1,2,3], _.isNumber))
