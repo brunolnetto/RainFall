@@ -28,7 +28,7 @@ def test_validate_event():
     # Test case 3: Testing with an unknown input format
     event = {'body': 'invalid'}
     
-    expected_body = {'error': 'Unknown input format'}
+    expected_body = {'message': 'Unknown input format'}
     expected_code = 400
 
     print(validate_event(event, None))
