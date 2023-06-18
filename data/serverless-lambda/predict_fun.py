@@ -10,8 +10,8 @@ import json
 # REPLACE WITH: 
 #   - command call model.predict(payliad).tolist()
 def make_prediction(payload):
-    return '42'
-    #return list(map(lambda x: x**2, payload))
+    #return str(type(payload))
+    return list(map(lambda x: x**2, payload))
 
 def api_return(body, status):
     return {
@@ -25,7 +25,7 @@ def api_return(body, status):
 def validate_event(event, context): 
     body=event['body']
 
-    # REPLACE WITH: 
+    # REPLACE WITH:
     #   - Custom validation elif steps 
     if isinstance(body, float):
         payload = [body]
@@ -39,10 +39,6 @@ def validate_event(event, context):
         
         return api_return(error_json, code)
     
-    # Scikit-learn needs a list or array as input
-    if isinstance(payload, dict):
-        payload = [payload]
-
     return payload
 
 # Prediction
