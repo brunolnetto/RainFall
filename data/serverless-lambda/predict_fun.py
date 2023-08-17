@@ -1,4 +1,8 @@
 import json
+import logging
+
+# Configure the logging settings
+logging.basicConfig(level=logging.INFO)  # Set the desired log level
 
 ## By loading the pickle outside `predict`,
 ## we re-use it across different Lambda calls for the same execution instance
@@ -50,10 +54,16 @@ def predict(event, context):
     
     try:
         output = make_prediction(payload)
+
+        # Log successful event
+        logging.info("Successful prediction: %s", output)
     
     except Exception as e:
         error_json={'error': str(e)}
         code=500
+
+        # Log unsuccessful event
+        logging.error("Error during prediction: %s", error_json)
 
         return api_return(error_json, code)
 
