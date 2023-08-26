@@ -1,68 +1,59 @@
 
-def operandErrorMessage(this_type, operation, other_type):
-    return f"Unsupported operand type(s) for {operation}: '{this_type}' and '{other_type}'"
+from .utils import PointError, ContinuousIntervalError
 
 class Point:
-    def __init__(self, value):
+    def __init__(self, value: float):
         self.value = value
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if isinstance(other, Point):
             return self.value == other.value
         else:
-            error_msg=operandErrorMessage('Point', '==', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('==', other)
 
-    def __ne__(self, other):
+    def __ne__(self, other) -> bool:
         if isinstance(other, Point):
             return self.value != other.value
         else:
-            error_msg=operandErrorMessage('Point', '!=', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('!=', other)
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         if isinstance(other, Point):
             return self.value < other.value
         else:
-            error_msg=operandErrorMessage('Point', '<', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('<', other)
 
-    def __le__(self, other):
+    def __le__(self, other) -> bool:
         if isinstance(other, Point):
             return self.value <= other.value
         else:
-            error_msg=operandErrorMessage('Point', '<=', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('<=', other)
 
-    def __gt__(self, other):
+    def __gt__(self, other) -> bool:
         if isinstance(other, Point):
             return self.value > other.value
         else:
-            error_msg=operandErrorMessage('Point', '>', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('>', other)
 
-    def __ge__(self, other):
+    def __ge__(self, other) -> bool:
         if isinstance(other, Point):
             return self.value >= other.value
         else:
-            error_msg=operandErrorMessage('Point', '>=', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('>=', other)
 
-    def __add__(self, other):
+    def __add__(self, other) -> bool:
         if isinstance(other, Point):
             return Point(self.value + other.value)
         else:
-            error_msg=operandErrorMessage('Point', '+', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('+', other)
 
-    def __sub__(self, other):
+    def __sub__(self, other) -> bool:
         if isinstance(other, Point):
             return Point(self.value - other.value)
         else:
-            error_msg=operandErrorMessage('Point', '-', type(other).__name__)
-            raise TypeError(error_msg)
+            raise PointError('-', other)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Point({self.value})"
 
 class ContinuousInterval:
@@ -84,13 +75,13 @@ class ContinuousInterval:
     def empty():
         return ContinuousInterval(0, 0, True, True)
     
-    def is_empty(self):
+    def is_empty(self) -> bool:
         are_open=self.is_start_open and self.is_end_open
         are_zero=self.start == self.end and self.start == 0
         
         return are_zero and are_open
 
-    def overlaps(self, other):
+    def overlaps(self, other) -> bool:
         if self.start < other.end and self.end > other.start:
             if self.start == other.end:
                 if self.is_start_open or other.is_end_open:
@@ -102,56 +93,48 @@ class ContinuousInterval:
                 return True
             if self.start < other.start < self.end or other.start < self.start < other.end:
                 return True
+        
         return False
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
             return (self.start, self.end, self.is_start_open, self.is_end_open) == \
                    (other.start, other.end, other.is_start_open, other.is_end_open)
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '==', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('==', other)
 
-    def __ne__(self, other):
+    def __ne__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
             return (self.start, self.end, self.is_start_open, self.is_end_open) != \
                    (other.start, other.end, other.is_start_open, other.is_end_open)
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '!=', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('!=', other)
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
-            print(self.end)
-            print(other.start)
-            print((self.end == other.start and (self.is_end_open or other.is_start_open)))
             return self.end < other.start or \
                 (self.end == other.start and (self.is_end_open or other.is_start_open))
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '<', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('<', other)
 
-    def __le__(self, other):
+    def __le__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
-            return self.end < other.end or (self.end == other.end and
-                                             (self.is_end_open or not other.is_end_open))
+            return self.end < other.end or \
+                (self.end == other.end and (self.is_end_open or not other.is_end_open))
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '<=', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('<=', other)
 
-    def __gt__(self, other):
+    def __gt__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
             return other.__lt__(self)
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '>', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('>', other)
 
-    def __ge__(self, other):
+    def __ge__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
             return other.__le__(self)
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '>=', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('>=', other)
 
     def __add__(self, other):
         if isinstance(other, ContinuousInterval):
@@ -162,8 +145,7 @@ class ContinuousInterval:
             elif self.end == other.start and not (self.is_end_open or other.is_start_open):
                 return ContinuousInterval(self.start, other.end, self.is_start_open, other.is_end_open)
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '+', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('+', other)
 
     def __sub__(self, other):
         if isinstance(other, ContinuousInterval):
@@ -180,19 +162,10 @@ class ContinuousInterval:
             else:
                 return ContinuousInterval(other.end, self.end, not other.is_end_open, self.is_end_open)
         else:
-            error_msg=operandErrorMessage('ContinuousInterval', '-', type(other).__name__)
-            raise TypeError(error_msg)
+            raise ContinuousIntervalError('-', other)
     
-    def length(self):
+    def length(self) -> float:
         return self.end - self.start
-
-    def contains(self, item):
-        if isinstance(item, ContinuousInterval):
-            return self.contains_interval(item)
-        elif isinstance(item, Point):
-            return self.contains_point(item)
-        else:
-            raise TypeError("Invalid type. Expected ContinuousInterval or Point.")
 
     def contains_interval(self, interval):
         if interval.start < self.start or interval.end > self.end:
@@ -213,6 +186,14 @@ class ContinuousInterval:
         return (point.value == self.start and not self.is_start_open) or \
                (point.value == self.end and not self.is_end_open) or \
                (self.start < point.value < self.end)
+
+    def contains(self, item):
+        if isinstance(item, ContinuousInterval):
+            return self.contains_interval(item)
+        elif isinstance(item, Point):
+            return self.contains_point(item)
+        else:
+            raise TypeError("Invalid type. Expected ContinuousInterval or Point.")    
 
     def is_overlapping(self, interval):
         are_not_disjoint=not (self.end < interval.start or self.start > interval.end)
@@ -319,21 +300,25 @@ class ContinuousInterval:
         return result
     
     def __repr__(self):
-        input_msg=f"{self.start}, {self.end}, is_start_open={self.is_start_open}, is_end_open={self.is_end_open}"
-        msg=f"ContinuousInterval({input_msg})"
-        return msg
-
+        left_bracket = ']' if self.is_start_open else '['
+        right_bracket = '[' if self.is_end_open else ']'
+        
+        return f"{left_bracket}{self.start}, {self.end}{right_bracket}"
     
 class DisjointInterval:
-    def __init__(self, intervals):
+    def __init__(self, intervals: list):
         self.intervals = intervals
 
-    def add_interval(self, interval):
+    # TODO: Create private method to verify if there is overlapping intervals 
+
+    def add_interval(self, interval: ContinuousInterval):
         # Add a new continuous interval to the collection
+        # FIXME: Verify if it overlaps any existent interval and fix it
         self.intervals.append(interval)
 
     def merge_overlapping_intervals(self):
         # Merge overlapping intervals within the collection
+        # FIXME: Add guard to verify overlapping
         merged_intervals = []
         sorted_intervals = sorted(self.intervals, key=lambda interval: interval.start)
         
@@ -353,7 +338,7 @@ class DisjointInterval:
     def get_interval_containing_point(self, point):
         # Find the interval (if any) that contains the given point
         for interval in self.intervals:
-            if interval.start <= point.value <= interval.end:
+            if interval.contains_point(point):
                 return interval
         
         return None
