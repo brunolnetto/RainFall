@@ -1,3 +1,5 @@
 *.eps
 .ipynb_checkpoints
 node_modules
+*.pyc
+*/__pycache__/*
