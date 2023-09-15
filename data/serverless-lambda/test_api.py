@@ -1,5 +1,5 @@
 import pytest
-from predict_fun import make_prediction, validate_event, api_return
+from predict_resolver import make_prediction, validate_event, api_return
 
 def test_make_prediction():
     # Test case 1: Testing with a single float value
