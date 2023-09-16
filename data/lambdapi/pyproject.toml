@@ -43,11 +43,14 @@ docstring-quotes = "double"
 [tool.poetry.dependencies]
 python = "^3.8"
 cloudpickle = "^2.2.1"
+
+[tool.poetry.dev-dependencies]
 coverage = "^7.3.1"
 pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
 ruff = "^0.0.290"
 autopep8 = "^2.0.4"
+jupyter-core = "^5.3.1"
 
 [build-system]
 requires = ["poetry-core"]

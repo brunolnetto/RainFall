@@ -4,6 +4,7 @@
 PYTHON := python
 PIP := pip
 BROWSER := firefox
+DOCKER := docker
 SOURCE_FOLDER := "lambda_api/"
 
 define BROWSER_PYSCRIPT
@@ -58,6 +59,9 @@ clean: clean-logs clean-pyc clean-test clean-cache ## Add a rule to remove unnec
 
 env: ## Add a rule to activate environment
 	poetry shell
+
+notebok: ## Add a rule to activate environment
+	jupyter notebook
 
 allow: ## Add a rule to allow scripts to execute
 	chmod +x *
