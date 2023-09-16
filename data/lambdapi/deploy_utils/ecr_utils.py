@@ -1,4 +1,6 @@
 from os import system
+import subprocess
+from subprocess import DEVNULL
 
 def build_tagged_image(image_name, tag):
     return f"{image_name}:{tag}"
@@ -12,10 +14,13 @@ def build_ecr_url(account_id_, region_, image_name, tag):
     
     return f"{password_stdin}/{tagged_image_name}"
 
+
 def run(command):
-    system(command)
+    subprocess.run(command, stdout=DEVNULL, stderr=DEVNULL, shell=True)
 
 def login_ecr_docker(account_id, region):
+    print('Logining on ECR account...')
+
     password_stdin=build_ecr_password_stdin(account_id, region)
     
     opts=f"get-login-password --region {region}"
@@ -29,6 +34,9 @@ def login_ecr_docker(account_id, region):
     run(entry_command)
     
 def create_ecr_image(ecr_image_name_):
+    
+    print('Creating ECR image...')
+    
     args_1=f"--repository-name {ecr_image_name_}"
     args_2=f"--image-scanning-configuration scanOnPush=true"
     args_3=f"--image-tag-mutability MUTABLE"
@@ -40,24 +48,32 @@ def create_ecr_image(ecr_image_name_):
     run(create_comand)
 
 def delete_ecr_image(ecr_image_name_):
+    print('Deleting existent ECR image...')
+
     tags=f"--force --repository-name {ecr_image_name_}"
     delete_command=f"aws ecr delete-repository {tags}" 
     
     run(delete_command)
     
 def build_docker_image(ecr_image_name):
+    print('Building docker image...')
+    
     build_args=f"-q -t {ecr_image_name} ."
     build_command=f"docker build {build_args}"
     
     run(build_command)
     
 def tag_docker_image(tagged_image_uri_, routed_url):
+    print('Tagging docker image...')
+
     tag_args=f"{tagged_image_uri_} {routed_url}"
     tag_command=f"docker tag {tag_args}"
     
     run(tag_command)
     
 def push_docker_image(tagged_image_uri):
+    print('Pushing docker image to ECR...')
+
     push_command=f"docker push {tagged_image_uri}"
 
     run(push_command)
