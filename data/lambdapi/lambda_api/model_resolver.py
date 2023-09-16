@@ -12,7 +12,6 @@ ALLOWED_TYPES = (int, float)
 # REPLACE WITH:
 #   - command call model.predict(payload).tolist()
 
-
 def model_prediction_map(payload_list: list):
     def square_lambda(x):
         return x ** 2
