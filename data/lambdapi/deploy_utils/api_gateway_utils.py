@@ -133,7 +133,7 @@ def deploy_rest_api(\
         rest_api_id = create_rest_api(g_client, rest_api_name_)
 
         # 2. Create resource
-        resource_id=create_resource(g_client, rest_api_id)
+        resource_id=create_resource(g_client, rest_api_id, endpoint_)
         
         # 3. Create method
         create_rest_method(g_client, rest_api_id, resource_id, method_verb_)
