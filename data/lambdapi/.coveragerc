@@ -1,0 +1,2 @@
+[run]
+omit = lambda_api/model_resolver.py
