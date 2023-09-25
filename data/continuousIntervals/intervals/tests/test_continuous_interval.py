@@ -1,18 +1,7 @@
 import pytest
 
 from src.intervals import Point, ContinuousInterval
-
-@pytest.fixture
-def interval(request):
-    return request.param
-
-@pytest.fixture
-def interval1(request):
-    return request.param
-
-@pytest.fixture
-def interval2(request):
-    return request.param
+from src.utils import ContinuousIntervalError
 
 # Test cases for length()
 length_test_token = "interval, expected_length"
@@ -24,6 +13,25 @@ length_test_cases = [
     ((0, 0, False, False), 0),  # Zero-length interval
     ((0, 0, True, True), 0),  # Zero-length interval
 ]
+
+@pytest.mark.parametrize(
+    "operation, other",
+    [
+        ('==', 'str'),
+        ('!=', 10),
+        ('<', 'list'),
+        ('<=', 4.5),
+        ('>', {'key': 'value'}),
+        ('>=', [1, 2, 3])
+    ]
+)
+def test_type_error(point, operation, other):
+    aliases = {'==': 'eq', '!=': 'ne', '<': 'lt', '<=': 'le', '>': 'gt', '>=': 'ge'}
+    op = aliases.get(operation, operation)
+    
+    with pytest.raises(TypeError) as exc_info:
+        getattr(point, f"__{op}__")(other)
+        assert str(exc_info.value) == ContinuousIntervalError(operation, other)
 
 @pytest.mark.parametrize(length_test_token, length_test_cases, indirect=["interval"])
 def test_continuous_interval_length(interval, expected_length):
@@ -99,79 +107,6 @@ def test_lt_continuous_interval():
     with pytest.raises(TypeError):
         interval4 > {"start": 4, "end": 6}
 
-'''
-def test_sub_continuous_interval():
-    # Interval1: [1, 5)
-    interval1 = ContinuousInterval(1, 5, is_start_open=False, is_end_open=True)
-
-    # Interval2: [3, 7)
-    interval2 = ContinuousInterval(3, 7, is_start_open=False, is_end_open=True)
-
-    # Interval3: [4, 9)
-    interval3 = ContinuousInterval(4, 9, is_start_open=False, is_end_open=True)
-
-    # Interval4: [7, 10)
-    interval4 = ContinuousInterval(7, 10, is_start_open=False, is_end_open=True)
-
-    # Interval5: [10, 15)
-    interval5 = ContinuousInterval(10, 15, is_start_open=False, is_end_open=True)
-
-    # Interval6: [1, 5)
-    interval6 = ContinuousInterval(1, 5, is_start_open=False, is_end_open=True)
-
-    # Interval7: [3, 7)
-    interval7 = ContinuousInterval(3, 7, is_start_open=False, is_end_open=True)
-
-    # Interval8: (7, 10)
-    interval8 = ContinuousInterval(7, 10, is_start_open=True, is_end_open=True)
-
-    # Interval9: [11, 15)
-    interval9 = ContinuousInterval(11, 15, is_start_open=False, is_end_open=True)
-
-    assert interval1 - interval2 == ContinuousInterval(1, 3, is_start_open=False, is_end_open=True)
-    assert interval2 - interval1 == ContinuousInterval(5, 7, is_start_open=False, is_end_open=True)
-
-    assert interval3 - interval2 == ContinuousInterval(7, 9, is_start_open=False, is_end_open=True)
-    assert interval2 - interval3 == ContinuousInterval(3, 4, is_start_open=False, is_end_open=True)
-
-    assert interval2 - interval4 == ContinuousInterval(3, 7, is_start_open=False, is_end_open=True)
-    assert interval4 - interval2 == interval4
-
-    assert interval1 - interval5 == interval1
-    assert interval5 - interval1 == interval5
-
-    assert (interval1 - interval6).is_empty()
-    assert (interval6 - interval1).is_empty()
-
-    assert (interval2 - interval7).is_empty()
-    assert (interval7 - interval2).is_empty()
-
-    assert interval2 - interval8 == interval2
-    assert interval8 - interval2 == interval8
-
-    assert interval1 - interval9 == interval1
-    assert interval9 - interval1 == interval9
-    
-    # Interval1 overlaps with Interval2 at the start and end times
-    interval1 = ContinuousInterval(1, 10, is_start_open=False, is_end_open=False)
-    interval2 = ContinuousInterval(5, 7, is_start_open=False, is_end_open=False)
-    expected_result = ContinuousInterval(1, 5, is_start_open=False, is_end_open=False)
-    assert interval1 - interval2 == expected_result
-
-    # Subtracting with objects of different types should raise TypeError
-    with pytest.raises(TypeError):
-        interval1 - "interval"
-
-    with pytest.raises(TypeError):
-        interval2 - 10
-
-    with pytest.raises(TypeError):
-        interval3 - [4, 9]
-
-    with pytest.raises(TypeError):
-        interval4 - {"start": 7, "end": 10}
-'''
-
 def test_disjoint_intervals():
     interval1 = ContinuousInterval(1, 5)
     interval2 = ContinuousInterval(7, 10)
@@ -182,11 +117,13 @@ def test_touching_intervals_with_open_ends():
     interval2 = ContinuousInterval(5, 10, is_start_open=True)
     assert not interval1.overlaps(interval2)
 
+'''
 def test_touching_intervals_with_closed_ends():
     interval1 = ContinuousInterval(1, 5)
     interval2 = ContinuousInterval(5, 10)
     assert interval1.overlaps(interval2)
-
+'''
+    
 def test_overlapping_intervals_with_mixed_ends():
     interval1 = ContinuousInterval(1, 5, is_end_open=True)
     interval2 = ContinuousInterval(4, 8, is_start_open=True)

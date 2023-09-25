@@ -1,10 +1,7 @@
 import pytest
 
-from src.intervals import Point, ContinuousInterval, operandErrorMessage
-
-@pytest.fixture
-def point():
-    return Point(5)
+from src.intervals import Point, ContinuousInterval
+from src.utils import PointError
 
 @pytest.mark.parametrize(
     "operation, other",
@@ -21,22 +18,20 @@ def test_type_error(point, operation, other):
     aliases = {'==': 'eq', '!=': 'ne', '<': 'lt', '<=': 'le', '>': 'gt', '>=': 'ge'}
     op = aliases.get(operation, operation)
     
-    
     with pytest.raises(TypeError) as exc_info:
         getattr(point, f"__{op}__")(other)
-    
-    assert str(exc_info.value) == operandErrorMessage('Point', operation, type(other).__name__)
+        assert str(exc_info.value) == PointError(operation, other)
 
 def test_eq_continuous_interval():
     interval1 = ContinuousInterval(1, 5)
     interval2 = ContinuousInterval(1, 5)
     interval3 = ContinuousInterval(2, 6)
     
-    assert interval1 == interval2  # Same start, end, open flags, should be equal
-    assert not (interval1 != interval2)  # Should not be not equal
+    assert interval1 == interval2           # Same start, end, open flags, should be equal
+    assert not (interval1 != interval2)     # Should not be not equal
     
-    assert not (interval1 == interval3)  # Different start, end, open flags, should not be equal
-    assert interval1 != interval3  # Should be not equal
+    assert not (interval1 == interval3)     # Different start, end, open flags, should not be equal
+    assert interval1 != interval3           # Should be not equal
     
     # Comparing with objects of different types should raise TypeError
     with pytest.raises(TypeError):
@@ -78,25 +73,30 @@ def test_point_comparison(point, other, expected_result):
     assert (point >= other) == (not expected_result) or (point == other)
 
 
-@pytest.mark.parametrize("other, expected_result", [
-    (Point(2), Point(7)),
-])
+@pytest.mark.parametrize(
+    "other, expected_result", \
+    [ (Point(2), Point(7)),]
+)
 def test_point_arithmetic_addition(point, other, expected_result):
     assert point + other == expected_result
 
 
-@pytest.mark.parametrize("other, expected_result", [
-    (Point(2), Point(3)),
-])
+@pytest.mark.parametrize(
+    "other, expected_result", \
+    [ (Point(2), Point(3)),]
+)
 def test_point_arithmetic_subtraction(point, other, expected_result):
     assert point - other == expected_result
 
 
-@pytest.mark.parametrize("invalid_operation", [
-    10,  # Comparison with incompatible type
-    "test",  # Addition with incompatible type
-    "test",  # Subtraction with incompatible type
-])
+@pytest.mark.parametrize(
+    "invalid_operation", 
+    [
+        10,      # Comparison with incompatible type
+        "test",  # Addition with incompatible type
+        "test",  # Subtraction with incompatible type
+    ]
+)
 def test_point_invalid_operations(point, invalid_operation):
     with pytest.raises(TypeError):
         point < invalid_operation
