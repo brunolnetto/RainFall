@@ -1,5 +1,10 @@
+from .errors import PointError, \
+    ContinuousIntervalError
 
-from .utils import PointError, ContinuousIntervalError
+from .utils import continuous_interval_values
+
+class EmptySet:
+    pass
 
 class Point:
     def __init__(self, value: float):
@@ -58,13 +63,11 @@ class Point:
 
 class ContinuousInterval:
     def __init__(self, start, end, is_start_open=False, is_end_open=False):
-        if start > end:
-            raise ValueError("Invalid interval: start must be less or equal than end")
-
-        if start == end and start != 0:
-            empty_msg = f"Only start and end equal 0 is allowed!"
-            error_msg = f"Invalid interval: open interval with zero length. {empty_msg}"
-            raise ValueError(error_msg)
+        if start >= end:
+            category='Invalid interval'
+            reason='start must be less than end'
+            inverted_msg=f"{category}: {reason}"
+            raise ValueError(inverted_msg)
 
         self.start = start
         self.end = end
@@ -97,95 +100,88 @@ class ContinuousInterval:
         return False
 
     def __eq__(self, other) -> bool:
-        if isinstance(other, ContinuousInterval):
-            return (self.start, self.end, self.is_start_open, self.is_end_open) == \
-                   (other.start, other.end, other.is_start_open, other.is_end_open)
+        if isinstance(other, EmptySet):
+            return False
+        
+        elif isinstance(other, ContinuousInterval):
+            self_props=continuous_interval_values(self)
+            other_props=continuous_interval_values(other)
+
+            return self_props == other_props
+                   
         else:
             raise ContinuousIntervalError('==', other)
 
     def __ne__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
-            return (self.start, self.end, self.is_start_open, self.is_end_open) != \
-                   (other.start, other.end, other.is_start_open, other.is_end_open)
+            self_props=continuous_interval_values(self)
+            other_props=continuous_interval_values(other)
+
+            return self_props != other_props
         else:
             raise ContinuousIntervalError('!=', other)
 
     def __lt__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
-            return self.end < other.start or \
-                (self.end == other.start and (self.is_end_open or other.is_start_open))
+            end_lesser_than_start = self.end < other.start
+            open_overlapping = self.end == other.start and \
+                (self.is_end_open or other.is_start_open)
+            
+            return end_lesser_than_start or open_overlapping
         else:
             raise ContinuousIntervalError('<', other)
 
     def __le__(self, other) -> bool:
-        if isinstance(other, ContinuousInterval):
-            return self.end < other.end or \
-                (self.end == other.end and (self.is_end_open or not other.is_end_open))
-        else:
-            raise ContinuousIntervalError('<=', other)
-
+        raise ContinuousIntervalError('<=', other)
+    
     def __gt__(self, other) -> bool:
         if isinstance(other, ContinuousInterval):
-            return other.__lt__(self)
+            start_greater_than_end = self.start > other.end
+            open_overlapping = self.start == other.end and \
+                (self.is_start_open or other.is_end_open)
+            
+            return start_greater_than_end or open_overlapping
         else:
             raise ContinuousIntervalError('>', other)
 
     def __ge__(self, other) -> bool:
-        if isinstance(other, ContinuousInterval):
-            return other.__le__(self)
-        else:
-            raise ContinuousIntervalError('>=', other)
+        raise ContinuousIntervalError('>=', other)
 
     def __add__(self, other):
         if isinstance(other, ContinuousInterval):
-            if self.is_empty():
-                return other
-            elif other.is_empty():
+            is_overlapping=self.end == other.start
+            is_overlap_not_open=not (self.is_end_open and other.is_start_open)
+            
+            if other.is_empty():
                 return self
-            elif self.end == other.start and not (self.is_end_open or other.is_start_open):
+            elif is_overlapping and is_overlap_not_open:
                 return ContinuousInterval(self.start, other.end, self.is_start_open, other.is_end_open)
         else:
             raise ContinuousIntervalError('+', other)
 
+    # todo: implement __sub__ method
     def __sub__(self, other):
-        if isinstance(other, ContinuousInterval):
-            if self.is_empty() or other.is_empty() or self == other:
-                return ContinuousInterval.empty()
-            elif other.end <= self.start or other.start >= self.end:
-                return self
-            elif self.start < other.start:
-                if self.end > other.end:
-                    return ContinuousInterval(self.start, other.start, self.is_start_open, not other.is_start_open) + \
-                           ContinuousInterval(other.end, self.end, not other.is_end_open, self.is_end_open)
-                else:
-                    return ContinuousInterval(self.start, other.start, self.is_start_open, not other.is_start_open)
-            else:
-                return ContinuousInterval(other.end, self.end, not other.is_end_open, self.is_end_open)
-        else:
-            raise ContinuousIntervalError('-', other)
+        raise ContinuousIntervalError('-', other)
     
     def length(self) -> float:
         return self.end - self.start
 
-    def contains_interval(self, interval):
-        if interval.start < self.start or interval.end > self.end:
-            return False
-
-        if interval.start == self.start and interval.is_start_open and not self.is_start_open:
-            return False
-
-        if interval.end == self.end and interval.is_end_open and not self.is_end_open:
-            return False
-
-        if interval.start == self.start and interval.end == self.end:
-            return interval.is_start_open == self.is_start_open and interval.is_end_open == self.is_end_open
-
-        return True
+    def contains_value(self, value: float) -> bool:
+        if(self.is_start_open and self.is_end_open):
+            return self.start < value < self.end
+        elif(not self.is_start_open and self.is_end_open):
+            return self.start <= value < self.end
+        elif(self.is_start_open and not self.is_end_open):
+            return self.start < value <= self.end
+        else: 
+            return self.start <= value <= self.end
 
     def contains_point(self, point):
-        return (point.value == self.start and not self.is_start_open) or \
-               (point.value == self.end and not self.is_end_open) or \
-               (self.start < point.value < self.end)
+        return self.contains_value(point.value)
+
+    def contains_interval(self, interval):
+        return self.contains_point(interval.start) and \
+               self.contains_point(interval.end) 
 
     def contains(self, item):
         if isinstance(item, ContinuousInterval):
@@ -193,7 +189,9 @@ class ContinuousInterval:
         elif isinstance(item, Point):
             return self.contains_point(item)
         else:
-            raise TypeError("Invalid type. Expected ContinuousInterval or Point.")    
+            category='Invalid item'
+            reason="Expected ContinuousInterval or Point"
+            raise TypeError(f"{category}: {reason}")
 
     def is_overlapping(self, interval):
         are_not_disjoint=not (self.end < interval.start or self.start > interval.end)
