@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+
+## --------------------------- ORION --------------------------- ##
+
+  redis:
+    image: redis:latest  ## Versão do Redis
+    command: [
+        "redis-server",
+        "--appendonly",
+        "yes",
+        "--port",
+        "6379"
+      ]
+
+    volumes:
+      - redis_data:/data
+
+    networks:
+      - ConexxoHubNet ## Nome da rede interna
+    #ports:
+    #  - 6379:6379
+
+
+## --------------------------- ORION --------------------------- ##
+
+volumes:
+  redis_data:
+    external: true
+    name: redis_data
+
+networks:
+  ConexxoHubNet: 
+    external: true
+    name: ConexxoHubNet

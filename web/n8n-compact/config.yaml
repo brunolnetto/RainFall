@@ -1,0 +1,9 @@
+# Generate test yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: n8n-compact
+spec:
+  containers:
+    - name: n8n-compact
+      image: n8nio/n8n:1.0.0

@@ -1,0 +1,12 @@
+{
+    "webhook_url": "https://example.com/webhook",
+    "editor_url": "n8n.example.com",
+    "smtp": {
+        "email": "user@example.com",
+        "user": "smtp_user",
+        "password": "secret_password",
+        "host": "smtp.example.com",
+        "port": 465,
+        "ssl": true
+    }
+}

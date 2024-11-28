@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres:14
+
+    networks:
+      - ConexxoHubNet
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    ## Descomente as linhas abaixo para uso externo
+    #ports:
+    #  - 5432:5432
+
+    environment:
+    ## Senha do postgres
+      - POSTGRES_PASSWORD=adc4b8a537cc78b85eab691ecddac2df
+      - PG_MAX_CONNECTIONS=500
+
+volumes:
+  postgres_data:
+    external: true
+    name: postgres_data
+
+networks:
+  ConexxoHubNet: ## Nome da rede interna
+    external: true
+    name: ConexxoHubNet ## Nome da rede interna

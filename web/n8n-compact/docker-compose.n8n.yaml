@@ -1,0 +1,182 @@
+version: "3.7"
+services:
+
+## --------------------------- ORION --------------------------- ##
+
+  n8n_editor:
+    image: n8nio/n8n:latest ## Versão do N8N
+    command: start
+
+    networks:
+      - ConexxoHubNet ## Nome da rede interna
+
+    environment:
+      ## Dados do postgres
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_DATABASE=n8n_queue
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=postgres
+      - DB_POSTGRESDB_PASSWORD=adc4b8a537cc78b85eab691ecddac2df
+
+      ## Encryption Key
+      - N8N_ENCRYPTION_KEY=971ef9a6e9ce56bdc5b68c0346b1fbff
+
+      ## Url do N8N
+      - N8N_HOST=n8n.conexxohub.com.br
+      - N8N_EDITOR_BASE_URL=https://n8n.conexxohub.com.br/
+      - WEBHOOK_URL=https://webhook.n8n.conexxohub.com.br/
+      - N8N_PROTOCOL=http
+
+      ## Modo do Node
+      - NODE_ENV=production
+
+      ## Modo de execução (deletar caso deseje em modo regular)
+      - EXECUTIONS_MODE=queue
+
+      ## Community Nodes
+      - N8N_REINSTALL_MISSING_PACKAGES=true
+      - N8N_COMMUNITY_PACKAGES_ENABLED=true
+      - N8N_NODE_PATH=/home/note/.n8n/nodes
+
+      ## Dados SMTP
+      - N8N_SMTP_SENDER=brunopeixoto@suasvendas.com
+      - N8N_SMTP_USER=brunopeixoto@suasvendas.com
+      - N8N_SMTP_PASS=vrok kbog mkif keak
+      - N8N_SMTP_HOST=smtp.gmail.com
+      - N8N_SMTP_PORT=465
+      - N8N_SMTP_SSL=false
+
+      ## Dados do Redis
+      - QUEUE_BULL_REDIS_HOST=redis
+      - QUEUE_BULL_REDIS_PORT=6379
+      - QUEUE_BULL_REDIS_DB=2
+      - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash,moment-with-locales
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=336
+
+      ## Timezone
+      - GENERIC_TIMEZONE=America/Sao_Paulo
+      - TZ=America/Sao_Paulo
+
+
+  n8n_webhook:
+    image: n8nio/n8n:latest ## Versão do N8N
+    command: webhook
+
+    networks:
+      - ConexxoHubNet ## Nome da rede interna
+
+    environment:
+
+      ## Dados do postgres
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_DATABASE=n8n_queue
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=postgres
+      - DB_POSTGRESDB_PASSWORD=adc4b8a537cc78b85eab691ecddac2df
+
+      ## Encryption Key
+      - N8N_ENCRYPTION_KEY=971ef9a6e9ce56bdc5b68c0346b1fbff
+
+      ## Url do N8N
+      - N8N_HOST=n8n.conexxohub.com.br
+      - N8N_EDITOR_BASE_URL=https://n8n.conexxohub.com.br/
+      - WEBHOOK_URL=https://webhook.n8n.conexxohub.com.br/
+      - N8N_PROTOCOL=https
+
+      ## Modo do Node
+      - NODE_ENV=production
+
+      ## Modo de execução (deletar caso deseje em modo regular)
+      - EXECUTIONS_MODE=queue
+
+      ## Community Nodes
+      - N8N_REINSTALL_MISSING_PACKAGES=true
+      - N8N_COMMUNITY_PACKAGES_ENABLED=true
+      - N8N_NODE_PATH=/home/note/.n8n/nodes
+
+      ## Dados SMTP
+      - N8N_SMTP_SENDER=brunopeixoto@suasvendas.com
+      - N8N_SMTP_USER=brunopeixoto@suasvendas.com
+      - N8N_SMTP_PASS=vrok kbog mkif keak
+      - N8N_SMTP_HOST=smtp.gmail.com
+      - N8N_SMTP_PORT=465
+      - N8N_SMTP_SSL=false
+
+      ## Dados do Redis
+      - QUEUE_BULL_REDIS_HOST=redis
+      - QUEUE_BULL_REDIS_PORT=6379
+      - QUEUE_BULL_REDIS_DB=2
+      - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash,moment-with-locales
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=336
+
+      ## Timezone
+      - GENERIC_TIMEZONE=America/Sao_Paulo
+      - TZ=America/Sao_Paulo
+
+
+  n8n_worker:
+    image: n8nio/n8n:latest ## Versão do N8N
+    command: worker --concurrency=10
+
+    networks:
+      - ConexxoHubNet ## Nome da rede interna
+
+    environment:
+
+      ## Dados do postgres
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_DATABASE=n8n_queue
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=postgres
+      - DB_POSTGRESDB_PASSWORD=adc4b8a537cc78b85eab691ecddac2df
+
+      ## Encryption Key
+      - N8N_ENCRYPTION_KEY=971ef9a6e9ce56bdc5b68c0346b1fbff
+
+      ## Url do N8N
+      - N8N_HOST=n8n.conexxohub.com.br
+      - N8N_EDITOR_BASE_URL=https://n8n.conexxohub.com.br/
+      - WEBHOOK_URL=https://webhook.n8n.conexxohub.com.br/
+      - N8N_PROTOCOL=https
+
+      ## Modo do Node
+      - NODE_ENV=production
+
+      ## Modo de execução (deletar caso deseje em modo regular)
+      - EXECUTIONS_MODE=queue
+
+      ## Community Nodes
+      - N8N_REINSTALL_MISSING_PACKAGES=true
+      - N8N_COMMUNITY_PACKAGES_ENABLED=true
+      - N8N_NODE_PATH=/home/note/.n8n/nodes
+
+      ## Dados SMTP
+      - N8N_SMTP_SENDER=brunopeixoto@suasvendas.com
+      - N8N_SMTP_USER=brunopeixoto@suasvendas.com
+      - N8N_SMTP_PASS=vrok kbog mkif keak
+      - N8N_SMTP_HOST=smtp.gmail.com
+      - N8N_SMTP_PORT=465
+      - N8N_SMTP_SSL=false
+
+      ## Dados do Redis
+      - QUEUE_BULL_REDIS_HOST=redis
+      - QUEUE_BULL_REDIS_PORT=6379
+      - QUEUE_BULL_REDIS_DB=2
+      - NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash,moment-with-locales
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=336
+
+      ## Timezone
+      - GENERIC_TIMEZONE=America/Sao_Paulo
+      - TZ=America/Sao_Paulo
+
+
+networks:
+  ConexxoHubNet:
+    name: ConexxoHubNet
+    external: true
